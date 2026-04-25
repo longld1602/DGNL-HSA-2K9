@@ -6,6 +6,10 @@
 <title>HSA 2K9 - TH02 | Khóa Luyện Thi Đánh Giá Năng Lực 2027 - HSA Education</title>
 <meta name="description" content="Khóa HSA 2K9 - TH02 đồng hành cùng con từ lớp 11 đến hết kỳ thi 2027: 379+ buổi Zoom, 406 video, 12 bài thi thử mô phỏng. Mục tiêu 100+ HSA & 8+/9+ Tốt nghiệp THPT." />
 
+<!-- Favicon (HSA Education logo) -->
+<link rel="icon" type="image/png" href="https://i.ibb.co/n83B0L5t/hsa-logo-png.png" />
+<link rel="apple-touch-icon" href="https://i.ibb.co/n83B0L5t/hsa-logo-png.png" />
+
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,9 +83,16 @@
   .header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;padding:0 20px;max-width:1280px;margin:0 auto}
   .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--primary)}
   .logo-mark{
-    width:40px;height:40px;border-radius:10px;
-    background:linear-gradient(135deg,var(--primary),var(--accent));
+    width:48px;height:48px;border-radius:10px;
     display:flex;align-items:center;justify-content:center;
+    overflow:hidden;flex-shrink:0;
+  }
+  .logo-mark img{
+    width:100%;height:100%;object-fit:contain;display:block;
+  }
+  /* Fallback gradient block khi logo image không load được */
+  .logo-mark.fallback{
+    background:linear-gradient(135deg,var(--primary),var(--accent));
     color:#fff;font-weight:900;font-size:18px;
     box-shadow:0 4px 12px rgba(30,58,138,.3);
   }
@@ -113,9 +124,14 @@
   .hero canvas#particles{position:absolute;inset:0;z-index:1;pointer-events:none}
   .hero-grid{
     position:relative;z-index:2;
-    display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center;
+    display:grid;grid-template-columns:1fr;gap:40px;align-items:center;
+    text-align:center;
   }
-  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px;text-align:center}}
+  .hero-grid .hero-text{max-width:980px;margin:0 auto}
+  .hero-grid .cta-row,
+  .hero-grid .hero-stats,
+  .hero-grid .countdown{justify-content:center}
+  @media(max-width:900px){.hero-grid{gap:32px}}
 
   .hero-badge{
     display:inline-flex;align-items:center;gap:8px;
@@ -215,57 +231,6 @@
   }
   .cd-num{font-size:28px;font-weight:900;color:#fff;line-height:1;font-variant-numeric:tabular-nums}
   .cd-unit{font-size:11px;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
-
-  /* Hero visual */
-  .hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
-  .hero-mockup{
-    position:relative;
-    background:linear-gradient(135deg,#fff,#F8FAFC);
-    border-radius:16px;padding:24px;
-    box-shadow:0 30px 80px rgba(0,0,0,.5);
-    transform:perspective(1000px) rotateY(-8deg) rotateX(4deg);
-    width:100%;max-width:420px;
-    transition:transform .5s;
-  }
-  .hero-mockup:hover{transform:perspective(1000px) rotateY(-4deg) rotateX(2deg) scale(1.02)}
-  .mockup-bar{display:flex;gap:6px;margin-bottom:16px}
-  .mockup-bar span{width:10px;height:10px;border-radius:50%;background:#CBD5E1}
-  .mockup-bar span:first-child{background:#EF4444}
-  .mockup-bar span:nth-child(2){background:#F59E0B}
-  .mockup-bar span:nth-child(3){background:#10B981}
-  .mockup-content h4{color:var(--primary);font-size:15px;margin-bottom:10px}
-  .mockup-content .lesson-row{
-    display:flex;align-items:center;gap:10px;padding:10px;
-    background:#F8FAFC;border-radius:8px;margin-bottom:8px;font-size:13px;
-  }
-  .mockup-content .lesson-row .play{
-    width:28px;height:28px;border-radius:50%;
-    background:linear-gradient(135deg,var(--accent),var(--accent-dark));
-    color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;
-  }
-  .mockup-content .lesson-row .info{flex:1;color:var(--text)}
-  .mockup-content .lesson-row .info b{display:block;color:var(--primary);font-size:13px}
-  .mockup-content .lesson-row .info span{color:var(--text-muted);font-size:11px}
-
-  .hero-badges{
-    position:absolute;top:-20px;right:-10px;
-    background:#fff;border-radius:999px;padding:8px 16px;
-    color:var(--primary);font-weight:700;font-size:12px;
-    box-shadow:var(--shadow);
-    animation:floatBadge 3s ease-in-out infinite;
-  }
-  @keyframes floatBadge{
-    0%,100%{transform:translateY(0) rotate(-3deg)}
-    50%{transform:translateY(-8px) rotate(3deg)}
-  }
-  .vtv-badge{
-    position:absolute;bottom:-16px;left:-10px;
-    background:linear-gradient(135deg,#DC2626,#991B1B);
-    color:#fff;border-radius:8px;padding:8px 14px;
-    font-weight:800;font-size:13px;
-    box-shadow:var(--shadow);
-    animation:floatBadge 3.4s ease-in-out infinite reverse;
-  }
 
   /* === SECTION 2: News Alert === */
   .news-alert{
@@ -489,24 +454,55 @@
   /* Teachers carousel */
   .teacher-card{
     background:#fff;border-radius:16px;padding:24px;text-align:center;
-    box-shadow:var(--shadow-sm);height:100%;
+    box-shadow:var(--shadow-sm);height:100%;display:flex;flex-direction:column;
+    border:1px solid var(--border);transition:transform .25s, box-shadow .25s;
   }
+  .teacher-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
   .teacher-avatar{
     width:120px;height:120px;border-radius:50%;
     background:linear-gradient(135deg,var(--primary),var(--accent));
-    margin:0 auto 16px;padding:4px;
+    margin:0 auto 14px;padding:4px;
   }
   .teacher-avatar > div{
     width:100%;height:100%;border-radius:50%;
     background:#F1F5F9;display:flex;align-items:center;justify-content:center;
-    font-size:42px;color:var(--primary);font-weight:900;
+    font-size:36px;color:var(--primary);font-weight:900;
+    overflow:hidden;
   }
-  .teacher-card h5{font-size:17px;color:var(--primary);margin-bottom:4px}
+  .teacher-avatar > div img{
+    width:100%;height:100%;object-fit:cover;display:block;
+  }
+  .teacher-role-badge{
+    display:inline-block;font-size:10px;font-weight:800;letter-spacing:.08em;
+    text-transform:uppercase;padding:4px 10px;border-radius:999px;
+    margin-bottom:8px;
+  }
+  .teacher-role-badge.advisor{background:#FEF3C7;color:#92400E}
+  .teacher-role-badge.faculty{background:#DBEAFE;color:#1E40AF}
+  .teacher-card h5{font-size:17px;color:var(--primary);margin-bottom:4px;line-height:1.25}
   .teacher-subj{
     font-size:12px;color:var(--accent);font-weight:700;
-    text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;
+    text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;
   }
-  .teacher-card p{font-size:13px;color:var(--text-muted);line-height:1.5}
+  .teacher-degree{
+    font-size:12px;color:var(--text);font-weight:700;background:#F1F5F9;
+    border-radius:6px;padding:3px 8px;display:inline-block;margin-bottom:10px;
+  }
+  .teacher-card ul{
+    list-style:none;text-align:left;margin-top:6px;
+  }
+  .teacher-card ul li{
+    font-size:12.5px;color:var(--text-muted);line-height:1.5;
+    padding-left:14px;position:relative;margin-bottom:4px;
+  }
+  .teacher-card ul li::before{
+    content:"✓";position:absolute;left:0;color:var(--success);font-weight:900;
+  }
+  .teachers-subtitle{
+    text-align:center;font-size:14px;color:var(--text-muted);
+    font-weight:700;margin:24px 0 14px;letter-spacing:.04em;text-transform:uppercase;
+  }
+  .teachers-subtitle span{color:var(--accent)}
 
   /* Testimonials masonry */
   .testimonials{
@@ -525,7 +521,10 @@
     width:50px;height:50px;border-radius:50%;
     background:linear-gradient(135deg,var(--primary),var(--accent));
     color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;
-    flex-shrink:0;
+    flex-shrink:0;overflow:hidden;
+  }
+  .test-avatar img{
+    width:100%;height:100%;object-fit:cover;display:block;
   }
   .test-info b{display:block;font-size:14px;color:var(--text)}
   .test-info span{font-size:12px;color:var(--text-muted)}
@@ -536,6 +535,14 @@
   }
   .test-school{font-size:13px;color:var(--success);font-weight:700;margin-bottom:10px}
   .test-quote{font-size:14px;color:var(--text-muted);font-style:italic;line-height:1.55}
+  .test-breakdown{
+    display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 12px;
+  }
+  .test-breakdown span{
+    background:#EEF2FF;color:var(--primary);font-size:11px;font-weight:700;
+    padding:3px 8px;border-radius:6px;letter-spacing:.02em;
+  }
+  .test-stars{color:#F59E0B;font-size:18px;letter-spacing:2px;margin-bottom:8px}
 
   .schools-row{
     display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:30px 0;
@@ -972,7 +979,7 @@
 <header class="header" id="header">
   <div class="header-inner">
     <a href="#" class="logo">
-      <div class="logo-mark">HSA</div>
+      <div class="logo-mark"><img src="https://i.ibb.co/n83B0L5t/hsa-logo-png.png" alt="HSA Education Logo" onerror="this.parentElement.classList.add('fallback');this.outerHTML='HSA';" /></div>
       <span>HSA Education</span>
     </a>
     <a href="#form" class="header-cta">
@@ -988,7 +995,7 @@
     <div class="hero-text">
       <div class="hero-badge" data-aos="fade-up">🔥 KHAI GIẢNG 10/06/2026 — CHỈ CÒN 100 SUẤT EARLY BIRD</div>
       <h1 data-aos="fade-up" data-aos-delay="100">
-        2K9 ơi, kỳ thi <span class="highlight">2027 đã thay đổi</span> — Bạn đã sẵn sàng chinh phục Đánh giá Năng lực trên máy tính chưa?
+        2K9 là <span class="highlight">lứa đầu tiên</span> bước vào giai đoạn tuyển sinh thay đổi mạnh mẽ — đừng để con bắt đầu ôn HSA quá muộn!
       </h1>
       <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
         Khóa HSA 2K9 - TH02 đồng hành cùng con từ lớp 11 đến hết kỳ thi: 379+ buổi Zoom trực tiếp, 406 video bài giảng, 12 bài thi thử mô phỏng đề thật. Mục tiêu: 100+ điểm HSA & 8+/9+ tốt nghiệp THPT.
@@ -1003,7 +1010,7 @@
 
       <div class="cta-row" data-aos="fade-up" data-aos-delay="400">
         <a href="#form" class="btn-primary pulse">📝 ĐĂNG KÝ TƯ VẤN MIỄN PHÍ NGAY</a>
-        <a href="tel:0974187313" class="cta-phone">hoặc gọi hotline 0974 187 313</a>
+        <a href="tel:0988371194" class="cta-phone">hoặc gọi hotline 0988 371 194</a>
       </div>
 
       <div class="countdown-wrap" data-aos="fade-up" data-aos-delay="500">
@@ -1017,32 +1024,6 @@
       </div>
     </div>
 
-    <div class="hero-visual" data-aos="fade-left" data-aos-delay="300">
-      <div class="hero-mockup">
-        <div class="mockup-bar"><span></span><span></span><span></span></div>
-        <div class="mockup-content">
-          <h4>🎓 HSA 2K9 - TH02 · Lộ trình học</h4>
-          <div class="lesson-row">
-            <div class="play">▶</div>
-            <div class="info"><b>Tư duy Định lượng</b><span>116 video · 94+ buổi Zoom</span></div>
-          </div>
-          <div class="lesson-row">
-            <div class="play">▶</div>
-            <div class="info"><b>Tư duy Định tính</b><span>45 video · 55 buổi Zoom</span></div>
-          </div>
-          <div class="lesson-row">
-            <div class="play">▶</div>
-            <div class="info"><b>Tiếng Anh</b><span>45 video · 55 buổi Zoom</span></div>
-          </div>
-          <div class="lesson-row">
-            <div class="play">▶</div>
-            <div class="info"><b>Khoa học (Lý-Hóa-Sinh-Sử-Địa)</b><span>75 video · 175+ buổi Zoom</span></div>
-          </div>
-        </div>
-        <div class="hero-badges">🏆 Sao Vàng 2024</div>
-        <div class="vtv-badge">📺 VTV3</div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1278,80 +1259,284 @@
   <!-- 6B Teachers -->
   <div class="cred-block alt">
     <div class="container">
-      <h3 data-aos="fade-up">👨‍🏫 20 Thầy Cô — Tác giả sách "Tổng ôn lý thuyết trọng tâm HSA" (NXB Hồng Đức)</h3>
+      <h3 data-aos="fade-up">👨‍🏫 Đội ngũ Cố vấn & Giáo viên — Khoá Tinh Hoa HSA TH01.2K9</h3>
+
+      <p class="teachers-subtitle"><span>★ Ban Cố Vấn ★</span> · 4 chuyên gia đầu ngành dẫn dắt chuyên môn</p>
 
       <div class="swiper teachers-swiper" data-aos="fade-up">
         <div class="swiper-wrapper">
+
+          <!-- 1. Đặng Ngọc Khương -->
           <div class="swiper-slide">
             <div class="teacher-card">
-              <div class="teacher-avatar"><div>T1</div></div>
-              <h5>Thầy Nguyễn Văn A</h5>
-              <div class="teacher-subj">Tư duy Định lượng</div>
-              <p>Cử nhân ĐHSP Hà Nội — Đồng tác giả sách HSA NXB Hồng Đức</p>
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/6cQcmCyV/A-nh-ma-n-hi-nh-2026-04-25-lu-c-21-33-59.png" alt="Thầy Đặng Ngọc Khương" onerror="this.outerHTML='ĐK';" /></div></div>
+              <span class="teacher-role-badge advisor">★ Trưởng Ban Cố Vấn</span>
+              <h5>Thầy Đặng Ngọc Khương</h5>
+              <div class="teacher-subj">Ngữ văn · Tư duy Định tính</div>
+              <span class="teacher-degree">Tiến sĩ Lí luận văn học</span>
+              <ul>
+                <li>Đồng sáng lập HSA Education</li>
+                <li>GV THPT Chuyên Ngoại ngữ – ĐHQG Hà Nội</li>
+                <li>GV đầu tiên cả nước tổ chức ôn luyện kì thi ĐGNL</li>
+                <li>Giải Nhì Giáo viên dạy giỏi Toàn quốc môn Ngữ văn (2012)</li>
+                <li>VNU Teaching Awards 2020 · Bằng khen Bộ GD&ĐT</li>
+                <li>Chủ biên & đồng chủ biên 12 đầu sách ôn thi TN & ĐGNL</li>
+                <li>17 năm kinh nghiệm · &gt;20.000 học sinh ôn thi ĐGNL</li>
+              </ul>
             </div>
           </div>
+
+          <!-- 2. Trần Ngọc Giang -->
           <div class="swiper-slide">
             <div class="teacher-card">
-              <div class="teacher-avatar"><div>T2</div></div>
-              <h5>Cô Trần Thị B</h5>
-              <div class="teacher-subj">Tư duy Định tính</div>
-              <p>Thạc sĩ Văn học ĐHQG Hà Nội — 8 năm luyện thi ĐGNL</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher-card">
-              <div class="teacher-avatar"><div>T3</div></div>
-              <h5>Thầy Lê Văn C</h5>
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/RFRcxc3/Tha-y-Tra-n-Ngo-c-Giang.png" alt="Thầy Trần Ngọc Giang" onerror="this.outerHTML='NG';" /></div></div>
+              <span class="teacher-role-badge advisor">★ Cố Vấn Tiếng Anh</span>
+              <h5>Thầy Trần Ngọc Giang</h5>
               <div class="teacher-subj">Tiếng Anh</div>
-              <p>IELTS 8.5 — Cựu giảng viên ĐH Ngoại Ngữ ĐHQG Hà Nội</p>
+              <span class="teacher-degree">Tiến sĩ – ĐH Newcastle, Australia</span>
+              <ul>
+                <li>Trưởng bộ môn Phương pháp dạy học Tiếng Anh</li>
+                <li>Thành viên Ban Cố vấn chuyên môn phát triển học liệu Tiếng Anh – HSA Education</li>
+                <li>Chiến sĩ thi đua cấp cơ sở trường ĐH Sư phạm Hà Nội</li>
+                <li>Tác giả nhiều bài viết, công trình nghiên cứu về PPDH Tiếng Anh</li>
+              </ul>
             </div>
           </div>
+
+          <!-- 3. Trần Thị Thu Hương -->
           <div class="swiper-slide">
             <div class="teacher-card">
-              <div class="teacher-avatar"><div>T4</div></div>
-              <h5>Cô Phạm Thị D</h5>
-              <div class="teacher-subj">Vật Lý</div>
-              <p>Thạc sĩ Vật lý KHTN — Tác giả 5 đầu sách luyện thi</p>
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/ymw420Zq/Tra-n-Thi-Thu-Hu-o-ng.png" alt="Cô Trần Thị Thu Hương" onerror="this.outerHTML='TH';" /></div></div>
+              <span class="teacher-role-badge advisor">★ Cố Vấn Ngữ Văn</span>
+              <h5>Cô Trần Thị Thu Hương</h5>
+              <div class="teacher-subj">Ngữ Văn</div>
+              <span class="teacher-degree">Tiến sĩ · Giảng viên</span>
+              <ul>
+                <li>Giảng viên Khoa Ngữ văn – Trường ĐH Sư phạm Hà Nội</li>
+                <li>Tác giả nhiều bài viết, công trình nghiên cứu về Văn học và Ngôn ngữ</li>
+                <li>Thành viên Ban Cố vấn chuyên môn phát triển học liệu Ngữ văn – HSA Education</li>
+                <li>Đồng tác giả nhiều đầu sách: Ôn thi tuyển sinh lớp 10 Ngữ văn (NXB Giáo dục, 2022); Củng cố và ôn luyện Ngữ văn 10/11 (NXB Thanh Niên, NXB ĐHQGHN, 2023–2024); Phát triển năng lực Ngữ văn 10/11; Ôn luyện kiến thức kì thi THPT môn Ngữ văn (NXB Giáo dục Việt Nam, 2024)</li>
+              </ul>
             </div>
           </div>
+
+          <!-- 4. Phạm Hoàng Hà -->
           <div class="swiper-slide">
             <div class="teacher-card">
-              <div class="teacher-avatar"><div>T5</div></div>
-              <h5>Thầy Hoàng Văn E</h5>
-              <div class="teacher-subj">Hóa Học</div>
-              <p>Tiến sĩ Hóa học — 12 năm kinh nghiệm ôn HSA & ĐGNL Sư Phạm</p>
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/Xx8R7Mqs/Tha-y-Pha-m-Hoa-ng-Ha-Photoroom.png" alt="Thầy Phạm Hoàng Hà" onerror="this.outerHTML='HH';" /></div></div>
+              <span class="teacher-role-badge advisor">★ Cố Vấn Toán</span>
+              <h5>Thầy Phạm Hoàng Hà</h5>
+              <div class="teacher-subj">Toán học</div>
+              <span class="teacher-degree">PGS.TS · Giảng viên Cao cấp</span>
+              <ul>
+                <li>PGS.TS Toán học</li>
+                <li>Giảng viên Cao cấp khoa Toán Tin – Trường ĐH Sư phạm Hà Nội</li>
+                <li>Thành viên Ban Cố vấn chuyên môn phát triển học liệu Toán học – HSA Education</li>
+                <li>Tác giả nhiều bài viết, công trình nghiên cứu về Toán học</li>
+                <li>Sách: Bài tập trắc nghiệm hình học 12 (NXBGD, 2017); SGK Toán 10 – Bộ Kết nối tri thức với cuộc sống (NXBGD, 2021); Giáo trình Hình học tuyến tính (NXB ĐHSPHN, 2022)</li>
+              </ul>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="teacher-card">
-              <div class="teacher-avatar"><div>T6</div></div>
-              <h5>Cô Nguyễn Thị F</h5>
-              <div class="teacher-subj">Sinh Học</div>
-              <p>Thạc sĩ Sinh học ĐHSP — Chuyên gia HSA phần Khoa học</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher-card">
-              <div class="teacher-avatar"><div>T7</div></div>
-              <h5>Thầy Vũ Văn G</h5>
-              <div class="teacher-subj">Lịch Sử</div>
-              <p>Cử nhân Sử học ĐHKHXH&NV — 10 năm dạy ĐGNL khối C00</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="teacher-card">
-              <div class="teacher-avatar"><div>T8</div></div>
-              <h5>Cô Đỗ Thị H</h5>
-              <div class="teacher-subj">Địa Lý</div>
-              <p>Thạc sĩ Địa lý ĐHSP — Đồng tác giả tài liệu HSA Khoa học</p>
-            </div>
-          </div>
+
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination" style="position:relative;margin-top:14px"></div>
+      </div>
+
+      <p class="teachers-subtitle" style="margin-top:36px"><span>📚 Tổ Bộ Môn ★ 10 Giáo viên trực tiếp giảng dạy</span></p>
+
+      <div class="swiper teachers-swiper teachers-swiper-2" data-aos="fade-up">
+        <div class="swiper-wrapper">
+
+          <!-- 5. Đỗ Xuân Thắng -->
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/LXXzvDyN/Tha-y-o-Xua-n-Tha-ng.png" alt="Thầy Đỗ Xuân Thắng" onerror="this.outerHTML='XT';" /></div></div>
+              <span class="teacher-role-badge faculty">📐 Tổ Toán – Định lượng</span>
+              <h5>Thầy Đỗ Xuân Thắng</h5>
+              <div class="teacher-subj">Toán · Tư duy Định lượng</div>
+              <span class="teacher-degree">Cử nhân</span>
+              <ul>
+                <li>Phó trưởng nhóm chuyên môn Toán – HSA Education</li>
+                <li>Thành viên đội tuyển Quốc gia môn Toán; Huy chương đồng Cơ học sinh viên toàn quốc</li>
+                <li>Tác giả: Chuyên đề trọng tâm ôn thi ĐGNL phần Định lượng (NXB Dân trí, 2024); Luyện đề ôn thi TN THPT môn Toán 2024; Luyện đề thực chiến ĐGNL ĐHQG TP.HCM (2024)</li>
+                <li>10 năm kinh nghiệm – ôn luyện TN & Đại học</li>
+                <li>&gt;20.000 học sinh ôn thi ĐGNL & ĐGTD</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 6. Nguyễn Tiến Đạt -->
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/7t40J8gp/a-dat-2.png" alt="Thầy Nguyễn Tiến Đạt" onerror="this.outerHTML='TĐ';" /></div></div>
+              <span class="teacher-role-badge faculty">📐 Tổ Toán – Định lượng</span>
+              <h5>Thầy Nguyễn Tiến Đạt</h5>
+              <div class="teacher-subj">Toán · Tư duy Định lượng</div>
+              <span class="teacher-degree">Cử nhân</span>
+              <ul>
+                <li>Chuyên gia luyện thi Toán đại học hàng đầu tại Hà Nội</li>
+                <li>14+ năm kinh nghiệm luyện thi THPT môn Toán</li>
+                <li>Đào tạo nhiều thủ khoa, á khoa trong các kỳ thi quan trọng</li>
+                <li>Phương pháp giúp HS trung bình → mất gốc đạt trên 9 điểm</li>
+                <li>GV được VTV mời tham gia giảng dạy trên sóng truyền hình</li>
+                <li>Được VnExpress, Dân Trí, Zing News, Kenh14, ANTV, VTC, QPVN, VTVcab đưa tin</li>
+                <li>Cộng đồng học sinh hơn 1 triệu người (fanpage "Toán Thầy Đạt")</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 7. Phạm Thảo Trinh -->
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/XZkvBTX9/08-CO-TRINH-TOA-N.png" alt="Cô Phạm Thảo Trinh" onerror="this.outerHTML='TT';" /></div></div>
+              <span class="teacher-role-badge faculty">📐 Tổ Toán – Định lượng</span>
+              <h5>Cô Phạm Thảo Trinh</h5>
+              <div class="teacher-subj">Toán · Tư duy Định lượng</div>
+              <span class="teacher-degree">Cử nhân</span>
+              <ul>
+                <li>Phó trưởng nhóm chuyên môn Toán học – HSA Education</li>
+                <li>Giáo viên Tiên tiến cấp hệ thống – Hệ thống giáo dục Vinschool</li>
+                <li>Phụ trách đội tuyển HSG Toán của hệ thống giáo dục Vinschool</li>
+                <li>Tác giả: Chuyên đề trọng tâm ôn thi ĐGNL phần Định lượng (NXB Dân trí, 2024); Bộ 20 đề thi ĐGNL 2025 (NXB Dân trí, 2024)</li>
+                <li>10 năm kinh nghiệm giảng dạy · &gt;5.000 HS ôn thi ĐGNL & ĐGTD</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 8. Trần Hải Linh -->
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/KjfMRPd5/Tha-y-Tra-n-Ha-i-Linh.png" alt="Thầy Trần Hải Linh" onerror="this.outerHTML='HL';" /></div></div>
+              <span class="teacher-role-badge faculty">📖 Tổ Văn – Định tính</span>
+              <h5>Thầy Trần Hải Linh</h5>
+              <div class="teacher-subj">Ngữ văn · Tư duy Định tính</div>
+              <span class="teacher-degree">Thạc sĩ</span>
+              <ul>
+                <li>Giáo viên THPT Xuân Đỉnh, Liên cấp Hanoi Academy</li>
+                <li>Thủ khoa khối C trường THPT Xuân Đỉnh</li>
+                <li>Nhận giấy khen 3 năm Đại học đạt thành tích Xuất sắc trong học tập</li>
+                <li>Nhiều học sinh đạt thành tích cao trong các kì thi HSA, THPT Quốc gia</li>
+                <li>"GV có học sinh đạt thành tích cao nhất môn thi Ngữ văn 2024 THPT Xuân Đỉnh"</li>
+                <li>Sách: "Luyện đề thực chiến – Ôn thi ĐGNL HSA phần Định tính" (NXB Dân trí, 2024)</li>
+                <li>10 năm KN · &gt;20.000 HS ôn thi TN & Đại học</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 9. Hoàng Phúc Đức -->
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/tT61zrw1/A-nh-ma-n-hi-nh-2026-04-25-lu-c-21-35-18.png" alt="Thầy Hoàng Phúc Đức" onerror="this.outerHTML='PĐ';" /></div></div>
+              <span class="teacher-role-badge faculty">🌐 Tổ Tiếng Anh</span>
+              <h5>Thầy Hoàng Phúc Đức</h5>
+              <div class="teacher-subj">Tiếng Anh</div>
+              <span class="teacher-degree">Cử nhân</span>
+              <ul>
+                <li>Trưởng nhóm Chuyên môn Tiếng Anh – HSA Education</li>
+                <li>Chứng chỉ Giảng dạy Tiếng Anh Quốc tế TESOL của INTESOL WORLDWIDE</li>
+                <li>Đạt chứng chỉ TESOL hạng A1 (Xuất sắc) của INTESOL WORLDWIDE</li>
+                <li>Sách: Bộ 25 Đề thực chiến phòng thi môn Tiếng Anh (NXB Dân Trí); Chuyên đề trọng tâm – Ôn thi ĐGNL HSA Phần Tiếng Anh; Chuyên đề ôn thi ĐGNL Đại học Sư phạm Hà Nội – môn Tiếng Anh</li>
+                <li>10 năm KN · Hỗ trợ &gt;10.000 HS ôn thi ĐGNL HSA</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 10. Đỗ Văn Bình -->
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/XrrPCC3s/Tha-y-Bi-nh-Ho-a.png" alt="Thầy Đỗ Văn Bình" onerror="this.outerHTML='VB';" /></div></div>
+              <span class="teacher-role-badge faculty">⚗️ Tổ Khoa học Tự nhiên</span>
+              <h5>Thầy Đỗ Văn Bình</h5>
+              <div class="teacher-subj">Hóa Học</div>
+              <span class="teacher-degree">Thạc sĩ</span>
+              <ul>
+                <li>Giáo viên môn Hóa học – HSA Education</li>
+                <li>Hiện đang công tác tại Trường THCS – THPT Newton</li>
+                <li>Tốt nghiệp Xuất sắc ngành Sư phạm Hóa học – ĐH Sư phạm Hà Nội 2</li>
+                <li>Giải Ba Olympic Hóa học sinh viên toàn quốc lần thứ X</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 11. Phạm Thị Hải Yến -->
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/bjPzHzky/A-nh-ma-n-hi-nh-2026-04-25-lu-c-21-36-43.png" alt="Cô Phạm Thị Hải Yến" onerror="this.outerHTML='HY';" /></div></div>
+              <span class="teacher-role-badge faculty">⚗️ Tổ Khoa học Tự nhiên</span>
+              <h5>Cô Phạm Thị Hải Yến</h5>
+              <div class="teacher-subj">Vật Lý</div>
+              <span class="teacher-degree">Thạc sĩ</span>
+              <ul>
+                <li>Hiện công tác tại THPT Chuyên Ngoại ngữ – Trường ĐH Ngoại ngữ – ĐHQG Hà Nội</li>
+                <li>Tốt nghiệp xuất sắc, lớp CLC khoa Vật lí – ĐH Sư phạm Hà Nội</li>
+                <li>Tác giả, đồng tác giả nhiều bài báo ISSN, báo cáo toàn văn hội thảo quốc gia, quốc tế ISBN</li>
+                <li>12 năm KN giảng dạy · Nhiều HS là Thủ khoa, Á khoa các trường Đại học</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 12. Hà Thị Dung -->
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/dJVX380B/Ha-Thi-Dung.png" alt="Cô Hà Thị Dung" onerror="this.outerHTML='HD';" /></div></div>
+              <span class="teacher-role-badge faculty">⚗️ Tổ Khoa học Tự nhiên</span>
+              <h5>Cô Hà Thị Dung</h5>
+              <div class="teacher-subj">Sinh Học</div>
+              <span class="teacher-degree">Thạc sĩ</span>
+              <ul>
+                <li>Hiện công tác THPT Chuyên Ngoại ngữ – ĐHQG Hà Nội</li>
+                <li>Cố vấn chuyên môn ban KHTN – HSA Education</li>
+                <li>Á khoa đầu ra lớp K56 CLC Khoa Sinh học – ĐHSP HN</li>
+                <li>Giải thưởng Odon Vallet cho Sinh viên Xuất sắc</li>
+                <li>Sách: Chuyên đề trọng tâm ôn thi ĐGNL HSA – Phần KHTN (NXB Dân trí, 2024); Luyện đề thực chiến ôn thi ĐGNL HSA – Phần Khoa học (NXB Dân trí, 2024)</li>
+                <li>14 năm KN · &gt;10.000 HS ôn thi ĐGNL & ĐGTD</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 13. Nguyễn Thị Lệ Phương -->
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/Jj8DZvmH/03-CO-PHU-O-NG-I-A.png" alt="Cô Nguyễn Thị Lệ Phương" onerror="this.outerHTML='LP';" /></div></div>
+              <span class="teacher-role-badge faculty">🌍 Tổ Khoa học Xã hội</span>
+              <h5>Cô Nguyễn Thị Lệ Phương</h5>
+              <div class="teacher-subj">Địa Lý</div>
+              <span class="teacher-degree">Thạc sĩ</span>
+              <ul>
+                <li>Hiện công tác tại THPT Chuyên Ngoại ngữ – ĐHQG Hà Nội</li>
+                <li>Cố vấn chuyên môn ban KHXH – HSA Education</li>
+                <li>Giải nhất Quốc gia dạy học tích hợp liên môn</li>
+                <li>Giải nhì GVG cấp thành phố · Bằng khen sáng kiến, sáng tạo Thủ đô</li>
+                <li>Tác giả nhiều đầu sách ôn thi TN & Đại học môn Địa lí</li>
+                <li>22 năm KN giảng dạy · &gt;10.000 HS ôn thi ĐGNL</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 14. Vũ Thúy Hiền -->
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div><img src="https://i.ibb.co/sMkmzPT/Co-ma-ng.png" alt="Cô Vũ Thúy Hiền" onerror="this.outerHTML='TH';" /></div></div>
+              <span class="teacher-role-badge faculty">🌍 Tổ Khoa học Xã hội</span>
+              <h5>Cô Vũ Thúy Hiền</h5>
+              <div class="teacher-subj">Lịch Sử</div>
+              <span class="teacher-degree">Cử nhân</span>
+              <ul>
+                <li>Giải Ba HSGQG Lịch sử 2021</li>
+                <li>Giải Nhì HSG Sử cấp tỉnh 2020 · 2018</li>
+                <li>Giải Khuyến khích HSG Sử cấp tỉnh 2019</li>
+                <li>400+ HS đạt giải HSG Sử trên cả nước: 33 giải Quốc gia, 40+ Huy chương Vàng/Bạc Olympic Lịch sử, 100+ Giải Nhất cấp tỉnh, cấp huyện</li>
+                <li>Có HS đạt thủ khoa khối C chuyên Chu Văn An – Lạng Sơn</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination swiper-pagination-2" style="position:relative;margin-top:14px"></div>
       </div>
 
       <p style="text-align:center;color:var(--text-muted);font-size:13px;margin-top:24px;font-style:italic">
-        [Cần thay thế: Bổ sung danh sách 20 thầy cô + ảnh + bio + môn dạy thực tế từ HSA Education]
+        ✓ 14 thầy cô được trích từ "Profile GV HSA 2K9" — Khoá Tinh Hoa HSA TH01.2K9 (HSA Education)
       </p>
     </div>
   </div>
@@ -1359,102 +1544,73 @@
   <!-- 6C Testimonials -->
   <div class="cred-block">
     <div class="container">
-      <h3 data-aos="fade-up">💬 Hàng ngàn 2K8, 2K7, 2K6 đã thành công — Lứa 2K9 sẽ là người tiếp theo</h3>
+      <h3 data-aos="fade-up">💬 Học viên khoá PT01 đã chinh phục HSA — Lứa 2K9 sẽ là người tiếp theo</h3>
 
       <div class="testimonials" data-aos="fade-up">
         <div class="test-card">
           <div class="test-head">
-            <div class="test-avatar">MA</div>
-            <div class="test-info"><b>Minh Anh</b><span>2K7 · Lớp 12A1</span></div>
-          </div>
-          <span class="test-score">🏆 HSA: 118/150</span>
-          <div class="test-school">✓ Đỗ FTU - Tài chính Quốc tế</div>
-          <p class="test-quote">"Học với HSA Education từ hè lớp 11, em đi từ điểm khảo sát 75 lên 118 chính thức. Thầy cô siêu tâm huyết, mentors hỗ trợ 24/7 thật sự."</p>
-        </div>
-
-        <div class="test-card">
-          <div class="test-head">
-            <div class="test-avatar">QH</div>
-            <div class="test-info"><b>Quang Huy</b><span>2K6 · Lớp 12A2</span></div>
-          </div>
-          <span class="test-score">🏆 HSA: 124/150</span>
-          <div class="test-school">✓ Đỗ NEU - Marketing</div>
-          <p class="test-quote">"12 bài thi thử mô phỏng đúng 100% trải nghiệm phòng thi thật. Vào phòng thi không hề bỡ ngỡ, làm bài đúng tốc độ luyện."</p>
-        </div>
-
-        <div class="test-card">
-          <div class="test-head">
-            <div class="test-avatar">TL</div>
-            <div class="test-info"><b>Thuỳ Linh</b><span>2K7 · Lớp 12 chuyên Anh</span></div>
-          </div>
-          <span class="test-score">🏆 HSA: 110/150</span>
-          <div class="test-school">✓ Đỗ VNU - Quan hệ Quốc tế</div>
-          <p class="test-quote">"Em sợ phần Khoa học vì học khối D, nhưng HSA Education dạy nền tảng lại rất chắc. Tốt nghiệp THPT em cũng đạt 8.6 nhờ video chữa đề kèm theo."</p>
-        </div>
-
-        <div class="test-card">
-          <div class="test-head">
-            <div class="test-avatar">DT</div>
-            <div class="test-info"><b>Đức Thành</b><span>2K8 · Lớp 12 chuyên Toán</span></div>
-          </div>
-          <span class="test-score">🏆 HSA: 132/150</span>
-          <div class="test-school">✓ Đỗ UET - Khoa học Máy tính</div>
-          <p class="test-quote">"Thi thử trên web HSA quá xịn. Hệ thống chấm điểm tức thì, có phân tích từng phần yếu. Em biết chính xác cần luyện thêm gì mỗi tuần."</p>
-        </div>
-
-        <div class="test-card">
-          <div class="test-head">
-            <div class="test-avatar">PA</div>
-            <div class="test-info"><b>Phương Anh</b><span>2K7 · Lớp 12A5</span></div>
-          </div>
-          <span class="test-score">🏆 HSA: 105/150</span>
-          <div class="test-school">✓ Đỗ TMU - Quản trị Kinh doanh</div>
-          <p class="test-quote">"Mẹ em sợ học online không hiệu quả nhưng Zoom HSA tương tác thật, giơ tay là thầy cô gọi liền. Học xong còn xem lại video không giới hạn."</p>
-        </div>
-
-        <div class="test-card">
-          <div class="test-head">
-            <div class="test-avatar">VK</div>
-            <div class="test-info"><b>Việt Khôi</b><span>2K6 · Lớp 12A3</span></div>
+            <div class="test-avatar"><img src="https://i.ibb.co/hJ3d6NKj/retouch-2026040411330131-Minh-Ngo-c-Va-n.jpg" alt="Văn Thị Minh Ngọc" onerror="this.outerHTML='MN';" /></div>
+            <div class="test-info"><b>Văn Thị Minh Ngọc</b><span>Khoá PT01 · THPT Lê Quý Đôn - Hà Đông</span></div>
           </div>
           <span class="test-score">🏆 HSA: 121/150</span>
-          <div class="test-school">✓ Đỗ HUST - Cơ điện tử</div>
-          <p class="test-quote">"Thầy cô đều là tác giả sách NXB Hồng Đức nên dạy cực kỳ bài bản. Bộ tài liệu tặng kèm 4 cuốn luyện đề thực sự đáng giá hơn học phí."</p>
+          <div class="test-breakdown">
+            <span>ĐL 35</span><span>ĐT 43</span><span>KH/TA 43</span>
+          </div>
+          <p class="test-quote">"Về giáo trình thì em thấy rất chi tiết, hệ thống, dễ hiểu, gần ngày thi còn có ôn tủ, ôn sát đề. Các thầy cô dạy dễ hiểu, có hỏi gì là thầy cô giải đáp hết, các anh chị trợ giảng cũng tận tâm, nhiệt tình. Em thích hệ thống website với sách của trung tâm lắm ạ, em không có nhiều thời gian học onl nên cái này gánh em lắm."</p>
         </div>
 
         <div class="test-card">
           <div class="test-head">
-            <div class="test-avatar">NH</div>
-            <div class="test-info"><b>Ngọc Hà</b><span>2K8 · Lớp 11A1</span></div>
+            <div class="test-avatar"><img src="https://i.ibb.co/bMvYQrmR/669614341-936580792509396-5340221313666476263-n.jpg" alt="An Hải Kim Sơn" onerror="this.outerHTML='KS';" /></div>
+            <div class="test-info"><b>An Hải Kim Sơn</b><span>Khoá PT01 · THPT Lê Quý Đôn - Hà Đông</span></div>
           </div>
-          <span class="test-score">🏆 Tốt nghiệp 9.2/10</span>
-          <div class="test-school">✓ Đang ôn HSA tại HSA Education</div>
-          <p class="test-quote">"Em mới học giai đoạn 1 nhưng đã thấy lộ trình rõ ràng. Mentors chữa bài nhanh, không lo bị bỏ rơi như học ở trung tâm cũ."</p>
+          <span class="test-score">🏆 HSA: 120/150</span>
+          <div class="test-breakdown">
+            <span>ĐL 34</span><span>ĐT 42</span><span>KH/TA 44</span>
+          </div>
+          <div class="test-stars">★★★★★</div>
+          <p class="test-quote">"Đánh giá 5 sao cho khoá học PT01 — chương trình bài bản, thầy cô tận tâm."</p>
         </div>
 
         <div class="test-card">
           <div class="test-head">
-            <div class="test-avatar">BQ</div>
-            <div class="test-info"><b>Bảo Quân</b><span>2K7 · Lớp 12A4</span></div>
+            <div class="test-avatar"><img src="https://i.ibb.co/Dfb2bcbS/0-E8788-EF-2-F08-4-E63-A7-F2-73-EC89881-D9-E-Phu-o-ng-Nguye-n.jpg" alt="Nguyễn Hà Phương" onerror="this.outerHTML='HP';" /></div>
+            <div class="test-info"><b>Nguyễn Hà Phương</b><span>Khoá PT01 · THPT chuyên Lê Hồng Phong</span></div>
           </div>
-          <span class="test-score">🏆 HSA: 115/150</span>
-          <div class="test-school">✓ Đỗ NUCE - Xây dựng</div>
-          <p class="test-quote">"Học khóa trọn gói tiết kiệm hơn nhiều so với học từng môn lẻ. Thầy cô chuyên sâu HSA, không phải kiểu copy giáo án THPT thông thường."</p>
+          <span class="test-score">🏆 HSA: 118/150</span>
+          <div class="test-breakdown">
+            <span>ĐL 34</span><span>ĐT 40</span><span>KH/TA 44</span>
+          </div>
+          <p class="test-quote">"Thầy cô giảng dạy chất lượng và nhiệt tình ạ."</p>
         </div>
 
         <div class="test-card">
           <div class="test-head">
-            <div class="test-avatar">HM</div>
-            <div class="test-info"><b>Hà My</b><span>2K7 · Lớp 12 chuyên Sinh</span></div>
+            <div class="test-avatar"><img src="https://i.ibb.co/Q3Sh5cMY/IMG-8950-Trang-Nhung-Luu.jpg" alt="Lưu Thị Trang Nhung" onerror="this.outerHTML='TN';" /></div>
+            <div class="test-info"><b>Lưu Thị Trang Nhung</b><span>Khoá PT01 · THPT Chuyên Tuyên Quang</span></div>
           </div>
-          <span class="test-score">🏆 HSA: 128/150</span>
-          <div class="test-school">✓ Đỗ HMU - Y khoa</div>
-          <p class="test-quote">"Mục tiêu Y nên cần cả HSA cao và Tốt nghiệp 9+. HSA Education tích hợp được cả hai, em không phải đăng ký 2 trung tâm khác nhau."</p>
+          <span class="test-score">🏆 HSA: 118/150</span>
+          <div class="test-breakdown">
+            <span>ĐL 36</span><span>ĐT 40</span><span>KH/TA 42</span>
+          </div>
+          <p class="test-quote">"Em thấy thầy, cô dạy chi tiết, kỹ lưỡng nên rất dễ hiểu ạ."</p>
+        </div>
+
+        <div class="test-card">
+          <div class="test-head">
+            <div class="test-avatar"><img src="https://i.ibb.co/DdVHBf5/df-u-c-An-Tra-n.jpg" alt="Trần Đức An" onerror="this.outerHTML='ĐA';" /></div>
+            <div class="test-info"><b>Trần Đức An</b><span>Khoá PT01 · THPT Chuyên Hà Tĩnh</span></div>
+          </div>
+          <span class="test-score">🏆 HSA: 116/150</span>
+          <div class="test-breakdown">
+            <span>ĐL 35</span><span>ĐT 36</span><span>KH/TA 45</span>
+          </div>
+          <p class="test-quote">"Em thấy rằng các thầy cô rất có tâm, dạy dễ hiểu, tạo cho em cảm giác thoải mái khi học tập. Chương trình bám đề thi."</p>
         </div>
       </div>
 
       <p style="text-align:center;color:var(--text-muted);font-size:13px;font-style:italic;margin-bottom:30px">
-        [Cần thay thế: 6-9 testimonial thật từ học viên cũ — gồm ảnh, tên, niên khóa, điểm, trường đỗ, quote]
+        ✓ 5 testimonial thực tế từ học viên khoá PT01 (HSA Education) — điểm thi & trường THPT đã được xác minh
       </p>
 
       <div data-aos="fade-up">
@@ -1613,46 +1769,21 @@
         <h3>Đăng ký tư vấn miễn phí</h3>
         <form id="leadForm">
           <div class="field">
-            <label>Họ và tên học sinh *</label>
-            <input type="text" name="hoTen" required placeholder="Nguyễn Văn A" />
-            <div class="form-error" data-error="hoTen">Vui lòng nhập họ tên</div>
-          </div>
-
-          <div class="field-row">
-            <div class="field">
-              <label>Năm sinh *</label>
-              <input type="number" name="namSinh" required value="2009" min="2008" max="2010" />
-              <div class="form-error" data-error="namSinh">Năm sinh từ 2008-2010</div>
-            </div>
-            <div class="field">
-              <label>Số điện thoại *</label>
-              <input type="tel" name="sdt" required placeholder="0987654321" />
-              <div class="form-error" data-error="sdt">SĐT không hợp lệ (10 số, bắt đầu 0)</div>
-            </div>
+            <label>Họ tên phụ huynh *</label>
+            <input type="text" name="hoTen" required placeholder="VD: Nguyễn Thị Lan" />
+            <div class="form-error" data-error="hoTen">Vui lòng nhập họ tên phụ huynh</div>
           </div>
 
           <div class="field">
-            <label>Email *</label>
+            <label>Số điện thoại phụ huynh *</label>
+            <input type="tel" name="sdt" required placeholder="0987654321" />
+            <div class="form-error" data-error="sdt">SĐT không hợp lệ (10 số, bắt đầu 0)</div>
+          </div>
+
+          <div class="field">
+            <label>Email phụ huynh *</label>
             <input type="email" name="email" required placeholder="email@example.com" />
             <div class="form-error" data-error="email">Email không hợp lệ</div>
-          </div>
-
-          <div class="field">
-            <label>Nguyện vọng trường đại học của con</label>
-            <input type="text" name="nguyenVong" placeholder="VD: NEU, FTU, VNU..." />
-          </div>
-
-          <div class="field">
-            <label>Kỳ thi quan tâm *</label>
-            <select name="kyThi" required>
-              <option value="">-- Chọn kỳ thi --</option>
-              <option>ĐGNL ĐHQG Hà Nội (HSA)</option>
-              <option>ĐGNL Bộ Công An (BCA)</option>
-              <option>ĐGNL Sư Phạm (SPT)</option>
-              <option>ĐGTD Bách Khoa (TSA)</option>
-              <option>ĐGNL Bộ Quốc Phòng (QDA)</option>
-            </select>
-            <div class="form-error" data-error="kyThi">Vui lòng chọn kỳ thi</div>
           </div>
 
           <label class="check-row">
@@ -1707,7 +1838,7 @@
 
       <details class="faq" data-aos="fade-up">
         <summary><span class="faq-q-icon">?</span>Hình thức thanh toán và xuất hóa đơn?</summary>
-        <div class="faq-body">Chuyển khoản ngân hàng. Có hóa đơn VAT theo yêu cầu. Hotline 0974 187 313 để được hướng dẫn cụ thể.</div>
+        <div class="faq-body">Chuyển khoản ngân hàng. Có hóa đơn VAT theo yêu cầu. Hotline 0988 371 194 để được hướng dẫn cụ thể.</div>
       </details>
 
       <details class="faq" data-aos="fade-up">
@@ -1738,7 +1869,7 @@
     </div>
 
     <div class="phone-cta" data-aos="fade-up" data-aos-delay="400">
-      <span class="ring">📞</span> Hoặc gọi ngay hotline: <a href="tel:0974187313">0974 187 313</a>
+      <span class="ring">📞</span> Hoặc gọi ngay hotline: <a href="tel:0988371194">0988 371 194</a>
     </div>
   </div>
 </section>
@@ -1749,7 +1880,7 @@
     <div class="foot-grid">
       <div class="foot-col foot-brand">
         <div class="logo" style="color:#fff">
-          <div class="logo-mark">HSA</div>
+          <div class="logo-mark"><img src="https://i.ibb.co/n83B0L5t/hsa-logo-png.png" alt="HSA Education Logo" onerror="this.parentElement.classList.add('fallback');this.outerHTML='HSA';" /></div>
           <span>HSA Education</span>
         </div>
         <p>Tiên phong & Dẫn đầu Luyện thi Đánh giá Năng lực từ 2015. Hệ sinh thái khép kín: Khóa học · Học liệu · Tư vấn miễn phí.</p>
@@ -1762,8 +1893,8 @@
       <div class="foot-col">
         <h5>Liên hệ</h5>
         <ul>
-          <li><a href="tel:0974187313">📞 0974 187 313</a></li>
-          <li><a href="mailto:contact@hsaedu.vn">📧 contact@hsaedu.vn</a></li>
+          <li><a href="tel:0988371194">📞 0988 371 194</a></li>
+          <li><a href="mailto:longld@hsavnu.edu.vn">📧 longld@hsavnu.edu.vn</a></li>
           <li>📍 Số 11B, Ngách 3/29, Ngõ 3, Phạm Tuấn Tài, Nghĩa Đô, Hà Nội</li>
         </ul>
       </div>
@@ -1785,7 +1916,7 @@
           <li><a href="#">Facebook</a></li>
           <li><a href="#">YouTube</a></li>
           <li><a href="#">TikTok</a></li>
-          <li><a href="#">Zalo OA</a></li>
+          <li><a href="https://zalo.me/0988371194" target="_blank" rel="noopener">💬 Zalo 0988 371 194</a></li>
         </ul>
         <div class="foot-newsletter">
           <input type="email" placeholder="Email của bạn" />
@@ -1803,12 +1934,12 @@
 
 <!-- ============= FLOATING ============= -->
 <div class="floating-buttons">
-  <a href="https://zalo.me/0974187313" class="float-btn zalo" title="Zalo">💬</a>
-  <a href="tel:0974187313" class="float-btn phone" title="Gọi điện">📞</a>
+  <a href="https://zalo.me/0988371194" class="float-btn zalo" title="Zalo">💬</a>
+  <a href="tel:0988371194" class="float-btn phone" title="Gọi điện">📞</a>
 </div>
 
 <div class="sticky-bottom" id="sticky-bottom">
-  <a href="tel:0974187313" class="call">📞 Gọi 0974 187 313</a>
+  <a href="tel:0988371194" class="call">📞 Gọi 0988 371 194</a>
   <a href="#form" class="signup">📝 Đăng ký ngay</a>
 </div>
 
@@ -1817,7 +1948,7 @@
   <div class="modal">
     <div class="modal-icon">🎉</div>
     <h3>Cảm ơn bạn!</h3>
-    <p>HSA Education sẽ liên hệ trong vòng 24h. Trong thời gian chờ, bạn có thể gọi hotline <b>0974 187 313</b> để được hỗ trợ ngay.</p>
+    <p>HSA Education sẽ liên hệ trong vòng 24h. Trong thời gian chờ, bạn có thể gọi hotline <b>0988 371 194</b> để được hỗ trợ ngay.</p>
     <button onclick="closeModal()">Đóng</button>
   </div>
 </div>
@@ -1977,18 +2108,22 @@ function initParticles(canvasId, color) {
 initParticles('particles', '255,255,255');
 initParticles('particles2', '245,158,11');
 
-// ===== Swiper =====
-new Swiper('.teachers-swiper', {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  autoplay: { delay: 4000, disableOnInteraction: false },
-  pagination: { el: '.swiper-pagination', clickable: true },
-  loop: true,
-  breakpoints: {
-    640: { slidesPerView: 2 },
-    900: { slidesPerView: 3 },
-    1100: { slidesPerView: 4 }
-  }
+// ===== Swiper (init each .teachers-swiper independently with own pagination) =====
+document.querySelectorAll('.teachers-swiper').forEach((el, idx) => {
+  // Find the pagination element belonging to this swiper (sibling, not nested in another swiper)
+  const pag = el.querySelector(':scope > .swiper-pagination');
+  new Swiper(el, {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: { delay: 5000 + idx * 800, disableOnInteraction: false },
+    pagination: { el: pag, clickable: true },
+    loop: true,
+    breakpoints: {
+      640: { slidesPerView: 2 },
+      900: { slidesPerView: 3 },
+      1100: { slidesPerView: 4 }
+    }
+  });
 });
 
 // ===== Form =====
@@ -2003,11 +2138,8 @@ function showError(name, show) {
 function validate(data) {
   let valid = true;
   if (!data.hoTen.trim()) { showError('hoTen', true); valid = false; } else showError('hoTen', false);
-  const ns = parseInt(data.namSinh);
-  if (!ns || ns < 2008 || ns > 2010) { showError('namSinh', true); valid = false; } else showError('namSinh', false);
   if (!/^0\d{9}$/.test(data.sdt)) { showError('sdt', true); valid = false; } else showError('sdt', false);
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) { showError('email', true); valid = false; } else showError('email', false);
-  if (!data.kyThi) { showError('kyThi', true); valid = false; } else showError('kyThi', false);
   return valid;
 }
 
@@ -2016,11 +2148,8 @@ form.addEventListener('submit', async (e) => {
   const fd = new FormData(form);
   const data = {
     hoTen: fd.get('hoTen'),
-    namSinh: fd.get('namSinh'),
     sdt: fd.get('sdt'),
     email: fd.get('email'),
-    nguyenVong: fd.get('nguyenVong') || '',
-    kyThi: fd.get('kyThi'),
     ambassadorId: getUTMParam('utm_content') || '',
     utmSource: getUTMParam('utm_source') || '',
     utmCampaign: getUTMParam('utm_campaign') || '',
@@ -2046,9 +2175,8 @@ form.addEventListener('submit', async (e) => {
     }
     showModal();
     form.reset();
-    document.querySelector('[name=namSinh]').value = '2009';
   } catch (err) {
-    alert('Có lỗi xảy ra. Vui lòng gọi 0974 187 313 để được hỗ trợ.');
+    alert('Có lỗi xảy ra. Vui lòng gọi 0988 371 194 để được hỗ trợ.');
   } finally {
     submitBtn.innerHTML = originalText;
     submitBtn.disabled = false;
