@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HSA 2K9 - TH02 | Khóa Luyện Thi Đánh Giá Năng Lực 2027 - HSA Education</title>
+<meta name="description" content="Khóa HSA 2K9 - TH02 đồng hành cùng con từ lớp 11 đến hết kỳ thi 2027: 379+ buổi Zoom, 406 video, 12 bài thi thử mô phỏng. Mục tiêu 100+ HSA & 8+/9+ Tốt nghiệp THPT." />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- AOS animations -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+<style>
+  :root{
+    --primary:#1E3A8A;
+    --primary-dark:#0F172A;
+    --primary-deep:#312E81;
+    --accent:#F59E0B;
+    --accent-dark:#D97706;
+    --danger:#DC2626;
+    --danger-light:#FEE2E2;
+    --success:#10B981;
+    --bg:#FFFFFF;
+    --bg-alt:#F8FAFC;
+    --text:#0F172A;
+    --text-muted:#475569;
+    --text-light:#CBD5E1;
+    --border:#E2E8F0;
+    --radius-sm:8px;
+    --radius:12px;
+    --radius-lg:20px;
+    --shadow-sm:0 2px 8px rgba(15,23,42,.08);
+    --shadow:0 8px 24px rgba(15,23,42,.10);
+    --shadow-lg:0 24px 48px rgba(15,23,42,.18);
+    --shadow-glow:0 0 40px rgba(245,158,11,.5);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Be Vietnam Pro',-apple-system,system-ui,sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.6;
+    overflow-x:hidden;
+    font-weight:400;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+  .container{max-width:1200px;margin:0 auto;padding:0 20px}
+  section{padding:80px 0;position:relative}
+  @media(max-width:768px){section{padding:56px 0}}
+
+  h1,h2,h3,h4{font-weight:800;line-height:1.2;letter-spacing:-.02em}
+  h2{font-size:clamp(28px,4vw,44px);margin-bottom:16px}
+  h3{font-size:clamp(20px,2.6vw,28px)}
+
+  .section-title{text-align:center;margin-bottom:48px}
+  .section-title h2 span{color:var(--accent)}
+
+  /* === STICKY HEADER === */
+  .header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+    transition:transform .3s, box-shadow .3s;
+  }
+  .header.scrolled{box-shadow:var(--shadow-sm)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;padding:0 20px;max-width:1280px;margin:0 auto}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--primary)}
+  .logo-mark{
+    width:40px;height:40px;border-radius:10px;
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:900;font-size:18px;
+    box-shadow:0 4px 12px rgba(30,58,138,.3);
+  }
+  .header-cta{
+    background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+    color:#fff;font-weight:700;padding:10px 20px;border-radius:999px;
+    font-size:14px;display:inline-flex;align-items:center;gap:6px;
+    box-shadow:0 4px 16px rgba(245,158,11,.4);
+    transition:transform .2s, box-shadow .2s;
+  }
+  .header-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,158,11,.5)}
+  @media(max-width:600px){.header-cta span{display:none}.header-cta::before{content:"📝"}}
+
+  /* === HERO === */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    background:linear-gradient(135deg,var(--primary) 0%,var(--primary-deep) 100%);
+    color:#fff;padding:120px 0 80px;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);
+    background-size:32px 32px;
+    opacity:.5;
+  }
+  .hero canvas#particles{position:absolute;inset:0;z-index:1;pointer-events:none}
+  .hero-grid{
+    position:relative;z-index:2;
+    display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center;
+  }
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px;text-align:center}}
+
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+    color:#fff;font-weight:700;padding:8px 18px;border-radius:999px;
+    font-size:13px;margin-bottom:24px;letter-spacing:.02em;
+    box-shadow:0 4px 16px rgba(245,158,11,.4);
+    animation:badgePulse 2.4s ease-in-out infinite;
+  }
+  @keyframes badgePulse{
+    0%,100%{box-shadow:0 4px 16px rgba(245,158,11,.4)}
+    50%{box-shadow:0 4px 24px rgba(245,158,11,.7)}
+  }
+
+  .hero h1{
+    font-size:clamp(32px,4.5vw,58px);font-weight:900;line-height:1.1;margin-bottom:20px;
+  }
+  .hero h1 .highlight{color:var(--accent);position:relative;display:inline-block}
+  .hero h1 .highlight::after{
+    content:"";position:absolute;left:0;right:0;bottom:4px;height:8px;
+    background:rgba(245,158,11,.3);z-index:-1;
+  }
+
+  .hero-sub{
+    font-size:clamp(15px,1.4vw,19px);color:var(--text-light);
+    margin-bottom:32px;max-width:600px;
+    font-weight:400;line-height:1.6;
+  }
+  @media(max-width:900px){.hero-sub{margin-left:auto;margin-right:auto}}
+
+  .hero-stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+    margin-bottom:32px;
+  }
+  @media(max-width:600px){.hero-stats{grid-template-columns:repeat(2,1fr)}}
+  .stat-card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(8px);
+    padding:16px 12px;border-radius:12px;text-align:center;
+    transition:transform .3s, background .3s;
+  }
+  .stat-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.14)}
+  .stat-num{
+    font-size:clamp(22px,2.6vw,32px);font-weight:900;color:var(--accent);
+    line-height:1;margin-bottom:4px;
+  }
+  .stat-label{font-size:12px;color:var(--text-light);font-weight:500}
+
+  .cta-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:28px}
+  @media(max-width:900px){.cta-row{justify-content:center}}
+
+  .btn-primary{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+    color:#fff;font-weight:800;font-size:16px;
+    padding:18px 36px;border-radius:14px;
+    box-shadow:0 8px 32px rgba(245,158,11,.5);
+    position:relative;overflow:hidden;
+    transition:transform .25s, box-shadow .25s;
+    letter-spacing:.01em;
+  }
+  .btn-primary::before{
+    content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);
+    animation:shine 3s infinite;
+  }
+  @keyframes shine{0%{left:-100%}50%,100%{left:100%}}
+  .btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 40px rgba(245,158,11,.7)}
+  .btn-primary.pulse{animation:btnPulse 2.2s ease-in-out infinite}
+  @keyframes btnPulse{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.03)}
+  }
+  .btn-primary.mega{font-size:20px;padding:24px 48px}
+
+  .cta-phone{
+    color:var(--text-light);font-weight:500;font-size:15px;
+    border-bottom:1px dashed var(--text-light);
+    padding-bottom:2px;
+  }
+  .cta-phone:hover{color:var(--accent);border-color:var(--accent)}
+
+  /* Countdown */
+  .countdown-wrap{margin-top:8px}
+  .countdown-label{
+    font-size:14px;color:var(--accent);font-weight:600;margin-bottom:10px;
+  }
+  .countdown{display:flex;gap:10px;flex-wrap:wrap}
+  @media(max-width:900px){.countdown{justify-content:center}}
+  .cd-box{
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:12px;padding:12px 16px;
+    min-width:64px;text-align:center;
+    backdrop-filter:blur(8px);
+  }
+  .cd-num{font-size:28px;font-weight:900;color:#fff;line-height:1;font-variant-numeric:tabular-nums}
+  .cd-unit{font-size:11px;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+
+  /* Hero visual */
+  .hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
+  .hero-mockup{
+    position:relative;
+    background:linear-gradient(135deg,#fff,#F8FAFC);
+    border-radius:16px;padding:24px;
+    box-shadow:0 30px 80px rgba(0,0,0,.5);
+    transform:perspective(1000px) rotateY(-8deg) rotateX(4deg);
+    width:100%;max-width:420px;
+    transition:transform .5s;
+  }
+  .hero-mockup:hover{transform:perspective(1000px) rotateY(-4deg) rotateX(2deg) scale(1.02)}
+  .mockup-bar{display:flex;gap:6px;margin-bottom:16px}
+  .mockup-bar span{width:10px;height:10px;border-radius:50%;background:#CBD5E1}
+  .mockup-bar span:first-child{background:#EF4444}
+  .mockup-bar span:nth-child(2){background:#F59E0B}
+  .mockup-bar span:nth-child(3){background:#10B981}
+  .mockup-content h4{color:var(--primary);font-size:15px;margin-bottom:10px}
+  .mockup-content .lesson-row{
+    display:flex;align-items:center;gap:10px;padding:10px;
+    background:#F8FAFC;border-radius:8px;margin-bottom:8px;font-size:13px;
+  }
+  .mockup-content .lesson-row .play{
+    width:28px;height:28px;border-radius:50%;
+    background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+    color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;
+  }
+  .mockup-content .lesson-row .info{flex:1;color:var(--text)}
+  .mockup-content .lesson-row .info b{display:block;color:var(--primary);font-size:13px}
+  .mockup-content .lesson-row .info span{color:var(--text-muted);font-size:11px}
+
+  .hero-badges{
+    position:absolute;top:-20px;right:-10px;
+    background:#fff;border-radius:999px;padding:8px 16px;
+    color:var(--primary);font-weight:700;font-size:12px;
+    box-shadow:var(--shadow);
+    animation:floatBadge 3s ease-in-out infinite;
+  }
+  @keyframes floatBadge{
+    0%,100%{transform:translateY(0) rotate(-3deg)}
+    50%{transform:translateY(-8px) rotate(3deg)}
+  }
+  .vtv-badge{
+    position:absolute;bottom:-16px;left:-10px;
+    background:linear-gradient(135deg,#DC2626,#991B1B);
+    color:#fff;border-radius:8px;padding:8px 14px;
+    font-weight:800;font-size:13px;
+    box-shadow:var(--shadow);
+    animation:floatBadge 3.4s ease-in-out infinite reverse;
+  }
+
+  /* === SECTION 2: News Alert === */
+  .news-alert{
+    background:linear-gradient(180deg,#FEE2E2 0%,#FEF2F2 100%);
+    border-top:3px dashed var(--danger);
+    border-bottom:3px dashed var(--danger);
+  }
+  .news-title{
+    text-align:center;color:var(--danger);
+    font-size:clamp(24px,3.4vw,36px);font-weight:900;
+    margin-bottom:12px;line-height:1.25;
+  }
+  .news-sub{
+    text-align:center;color:var(--text-muted);font-size:16px;
+    max-width:780px;margin:0 auto 40px;
+  }
+
+  .news-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  }
+  @media(max-width:900px){.news-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.news-grid{grid-template-columns:1fr}}
+
+  .news-card{
+    background:#fff;border-radius:14px;padding:24px;
+    border-left:4px solid var(--danger);
+    box-shadow:var(--shadow-sm);
+    transition:transform .3s, box-shadow .3s;
+  }
+  .news-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+  .news-icon{
+    font-size:36px;margin-bottom:14px;display:inline-block;
+    animation:wiggle 4s ease-in-out infinite;
+  }
+  @keyframes wiggle{
+    0%,90%,100%{transform:rotate(0)}
+    93%{transform:rotate(-10deg)}
+    96%{transform:rotate(10deg)}
+  }
+  .news-card h4{font-size:17px;color:var(--text);margin-bottom:10px;line-height:1.3}
+  .news-card p{font-size:14px;color:var(--text-muted);line-height:1.55}
+
+  .news-accordion{
+    margin-top:32px;background:#fff;border-radius:14px;
+    border:1px solid var(--border);overflow:hidden;
+  }
+  .news-accordion summary{
+    cursor:pointer;padding:18px 24px;font-weight:700;color:var(--primary);
+    display:flex;align-items:center;gap:10px;list-style:none;user-select:none;
+  }
+  .news-accordion summary::-webkit-details-marker{display:none}
+  .news-accordion summary::after{
+    content:"▼";margin-left:auto;font-size:12px;
+    transition:transform .3s;
+  }
+  .news-accordion[open] summary::after{transform:rotate(180deg)}
+  .news-accordion ul{padding:0 24px 20px 48px}
+  .news-accordion li{padding:6px 0;color:var(--text-muted)}
+
+  .news-bridge{
+    text-align:center;margin-top:40px;
+    font-size:clamp(18px,2.2vw,24px);font-weight:700;color:var(--primary);
+    max-width:880px;margin-left:auto;margin-right:auto;line-height:1.5;
+  }
+
+  /* === SECTION 3: Pain Points === */
+  .pain-section{background:var(--bg-alt)}
+  .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:900px){.pain-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.pain-grid{grid-template-columns:1fr}}
+  .pain-card{
+    background:#fff;border-radius:16px;padding:32px 24px;
+    text-align:center;
+    box-shadow:var(--shadow-sm);
+    transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s;
+    border:1px solid var(--border);
+  }
+  .pain-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
+  .pain-icon{font-size:52px;margin-bottom:16px;display:inline-block}
+  .pain-card h4{font-size:18px;margin-bottom:12px;color:var(--primary)}
+  .pain-card p{font-size:14.5px;color:var(--text-muted);line-height:1.6}
+
+  .pain-bridge{
+    text-align:center;margin-top:48px;font-weight:700;
+    font-size:clamp(16px,1.8vw,20px);color:var(--text);
+    max-width:780px;margin-left:auto;margin-right:auto;
+  }
+
+  /* === SECTION 4: Value Proposition === */
+  .value-section{
+    background:linear-gradient(180deg,#EFF6FF 0%,#fff 100%);
+  }
+  .value-sub{
+    text-align:center;font-size:17px;color:var(--text-muted);
+    max-width:820px;margin:0 auto 56px;
+  }
+  .pillars{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  }
+  @media(max-width:900px){.pillars{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.pillars{grid-template-columns:1fr}}
+  .pillar{
+    background:#fff;border-radius:18px;padding:28px 22px;
+    box-shadow:var(--shadow);
+    border-top:4px solid var(--primary);
+    position:relative;transition:transform .3s;
+  }
+  .pillar:nth-child(2){border-top-color:var(--accent)}
+  .pillar:nth-child(3){border-top-color:var(--success)}
+  .pillar:nth-child(4){border-top-color:var(--danger)}
+  .pillar:hover{transform:translateY(-6px)}
+  .pillar-icon{font-size:42px;margin-bottom:14px}
+  .pillar h4{font-size:17px;margin-bottom:10px;color:var(--primary)}
+  .pillar p{font-size:14px;color:var(--text-muted);line-height:1.55}
+
+  .summary-banner{
+    margin-top:40px;background:linear-gradient(135deg,var(--primary),var(--primary-deep));
+    color:#fff;padding:24px 32px;border-radius:16px;text-align:center;
+    font-weight:700;font-size:clamp(15px,1.8vw,19px);line-height:1.5;
+    box-shadow:var(--shadow-lg);
+  }
+
+  .benefits-row{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;
+  }
+  @media(max-width:760px){.benefits-row{grid-template-columns:1fr}}
+  .benefit{
+    background:#ECFDF5;border:1px solid #A7F3D0;
+    border-radius:12px;padding:16px 18px;
+    display:flex;align-items:center;gap:12px;
+    font-weight:600;color:#065F46;font-size:14.5px;
+  }
+  .benefit::before{
+    content:"✓";flex-shrink:0;
+    width:28px;height:28px;border-radius:50%;
+    background:var(--success);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:900;
+  }
+
+  /* === SECTION 5: Timeline === */
+  .timeline-section{background:var(--bg-alt)}
+  .timeline{position:relative;max-width:920px;margin:0 auto;padding:20px 0}
+  .timeline::before{
+    content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;
+    background:linear-gradient(180deg,var(--primary),var(--accent));
+    transform:translateX(-50%);border-radius:3px;
+  }
+  @media(max-width:760px){.timeline::before{left:20px}}
+
+  .tl-item{
+    position:relative;width:50%;padding:20px 40px;
+  }
+  .tl-item:nth-child(odd){left:0;text-align:right}
+  .tl-item:nth-child(even){left:50%}
+  @media(max-width:760px){
+    .tl-item,.tl-item:nth-child(even){width:100%;left:0;text-align:left;padding:20px 0 20px 56px}
+  }
+
+  .tl-dot{
+    position:absolute;width:20px;height:20px;border-radius:50%;
+    background:var(--accent);top:32px;
+    box-shadow:0 0 0 4px #fff,0 0 0 6px var(--accent);
+  }
+  .tl-item:nth-child(odd) .tl-dot{right:-10px}
+  .tl-item:nth-child(even) .tl-dot{left:-10px}
+  @media(max-width:760px){
+    .tl-item .tl-dot,.tl-item:nth-child(even) .tl-dot{left:11px;right:auto}
+  }
+
+  .tl-card{
+    background:#fff;padding:22px 24px;border-radius:14px;
+    box-shadow:var(--shadow-sm);border:1px solid var(--border);
+    display:inline-block;text-align:left;max-width:100%;
+  }
+  .tl-date{
+    font-size:12px;font-weight:700;color:var(--accent);
+    text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;
+  }
+  .tl-card h4{font-size:18px;color:var(--primary);margin-bottom:8px}
+  .tl-card p{font-size:14px;color:var(--text-muted);line-height:1.55}
+
+  .tl-banner{
+    margin-top:48px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+    color:#fff;padding:20px 28px;border-radius:14px;text-align:center;
+    font-weight:700;font-size:17px;
+    box-shadow:0 12px 32px rgba(245,158,11,.35);
+  }
+
+  /* === SECTION 6: Credibility === */
+  .cred-block{padding:40px 0}
+  .cred-block.alt{background:var(--bg-alt)}
+  .cred-block h3{text-align:center;margin-bottom:32px;font-size:clamp(22px,2.6vw,30px)}
+
+  .badges-row{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:32px;
+  }
+  @media(max-width:900px){.badges-row{grid-template-columns:repeat(2,1fr)}}
+  .badge-item{
+    background:#fff;border-radius:14px;padding:24px 18px;text-align:center;
+    border:2px solid var(--border);transition:all .3s;
+  }
+  .badge-item:hover{border-color:var(--accent);transform:scale(1.04)}
+  .badge-emoji{font-size:42px;display:block;margin-bottom:10px}
+  .badge-item h5{font-size:14px;color:var(--primary);font-weight:700;line-height:1.35}
+
+  .counters{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+  }
+  @media(max-width:600px){.counters{grid-template-columns:repeat(2,1fr)}}
+  .counter{
+    text-align:center;padding:24px 14px;
+    background:linear-gradient(135deg,var(--primary),var(--primary-deep));
+    color:#fff;border-radius:14px;
+  }
+  .counter-num{
+    font-size:clamp(28px,3.6vw,42px);font-weight:900;color:var(--accent);line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .counter-label{font-size:13px;color:var(--text-light);margin-top:6px}
+
+  /* Teachers carousel */
+  .teacher-card{
+    background:#fff;border-radius:16px;padding:24px;text-align:center;
+    box-shadow:var(--shadow-sm);height:100%;
+  }
+  .teacher-avatar{
+    width:120px;height:120px;border-radius:50%;
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    margin:0 auto 16px;padding:4px;
+  }
+  .teacher-avatar > div{
+    width:100%;height:100%;border-radius:50%;
+    background:#F1F5F9;display:flex;align-items:center;justify-content:center;
+    font-size:42px;color:var(--primary);font-weight:900;
+  }
+  .teacher-card h5{font-size:17px;color:var(--primary);margin-bottom:4px}
+  .teacher-subj{
+    font-size:12px;color:var(--accent);font-weight:700;
+    text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;
+  }
+  .teacher-card p{font-size:13px;color:var(--text-muted);line-height:1.5}
+
+  /* Testimonials masonry */
+  .testimonials{
+    column-count:3;column-gap:20px;margin-bottom:40px;
+  }
+  @media(max-width:900px){.testimonials{column-count:2}}
+  @media(max-width:560px){.testimonials{column-count:1}}
+  .test-card{
+    break-inside:avoid;background:#fff;
+    border-radius:14px;padding:22px;
+    box-shadow:var(--shadow-sm);margin-bottom:20px;
+    border:1px solid var(--border);
+  }
+  .test-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .test-avatar{
+    width:50px;height:50px;border-radius:50%;
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;
+    flex-shrink:0;
+  }
+  .test-info b{display:block;font-size:14px;color:var(--text)}
+  .test-info span{font-size:12px;color:var(--text-muted)}
+  .test-score{
+    display:inline-block;background:linear-gradient(135deg,#FBBF24,#F59E0B);
+    color:#78350F;font-weight:800;font-size:12px;
+    padding:4px 10px;border-radius:999px;margin:4px 0 10px;
+  }
+  .test-school{font-size:13px;color:var(--success);font-weight:700;margin-bottom:10px}
+  .test-quote{font-size:14px;color:var(--text-muted);font-style:italic;line-height:1.55}
+
+  .schools-row{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:30px 0;
+  }
+  .school-badge{
+    background:#fff;border:1px solid var(--border);border-radius:10px;
+    padding:10px 20px;font-weight:800;color:var(--text-muted);
+    transition:all .3s;letter-spacing:.05em;
+  }
+  .school-badge:hover{color:var(--primary);border-color:var(--primary);transform:translateY(-3px)}
+
+  .book-banner{
+    background:linear-gradient(135deg,var(--primary),var(--primary-deep));
+    color:#fff;border-radius:18px;padding:32px;
+    display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:24px;
+  }
+  @media(max-width:760px){.book-banner{grid-template-columns:1fr;text-align:center}}
+  .book-banner h4{font-size:clamp(18px,2.2vw,24px);margin-bottom:10px}
+  .book-banner p{color:var(--text-light);font-size:15px}
+  .book-visual{
+    text-align:center;font-size:80px;
+    animation:floatBook 3.5s ease-in-out infinite;
+  }
+  @keyframes floatBook{
+    0%,100%{transform:translateY(0) rotate(-5deg)}
+    50%{transform:translateY(-12px) rotate(5deg)}
+  }
+
+  /* === SECTION 7: Format === */
+  .format-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
+  }
+  @media(max-width:900px){.format-grid{grid-template-columns:1fr}}
+  .features{display:grid;gap:18px}
+  .feature{
+    background:#fff;border-radius:14px;padding:20px;
+    box-shadow:var(--shadow-sm);border:1px solid var(--border);
+    display:flex;gap:16px;align-items:flex-start;
+    transition:transform .3s;
+  }
+  .feature:hover{transform:translateX(6px);border-color:var(--accent)}
+  .feature-icon{
+    flex-shrink:0;font-size:32px;width:52px;height:52px;
+    border-radius:12px;background:var(--bg-alt);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .feature h5{font-size:16px;color:var(--primary);margin-bottom:4px}
+  .feature p{font-size:14px;color:var(--text-muted)}
+
+  .format-mockup{
+    background:linear-gradient(135deg,var(--primary),var(--primary-deep));
+    border-radius:20px;padding:28px;
+    box-shadow:var(--shadow-lg);
+    transform:perspective(1000px) rotateY(-4deg);
+    transition:transform .5s;
+  }
+  .format-mockup:hover{transform:perspective(1000px) rotateY(0deg) scale(1.02)}
+  .format-mockup-title{color:#fff;font-weight:800;margin-bottom:14px;font-size:15px;display:flex;align-items:center;gap:8px}
+  .format-mockup-title .dot{width:10px;height:10px;border-radius:50%;background:#10B981;animation:livePulse 1.5s infinite}
+  @keyframes livePulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .video-frame{
+    background:#000;border-radius:12px;aspect-ratio:16/10;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:48px;margin-bottom:14px;position:relative;
+    background:linear-gradient(135deg,#1e293b,#0f172a);
+  }
+  .video-frame::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);
+    background-size:20px 20px;border-radius:12px;
+  }
+  .participants{display:flex;gap:8px;flex-wrap:wrap}
+  .pp{
+    width:36px;height:36px;border-radius:50%;
+    background:linear-gradient(135deg,#F59E0B,#DC2626);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:800;font-size:12px;
+    border:2px solid #1E3A8A;
+  }
+
+  /* === SECTION 8: Pricing === */
+  .pricing-section{
+    background:linear-gradient(180deg,var(--primary-dark) 0%,#020617 100%);
+    color:#fff;position:relative;overflow:hidden;
+  }
+  .pricing-section::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(245,158,11,.12) 1px,transparent 1px);
+    background-size:40px 40px;opacity:.4;
+  }
+  .pricing-section .container{position:relative;z-index:1}
+  .pricing-title{text-align:center;color:#fff;margin-bottom:8px}
+  .pricing-title-sub{text-align:center;color:var(--accent);font-weight:600;margin-bottom:48px}
+
+  .pricing-card{
+    background:#fff;color:var(--text);
+    border-radius:24px;padding:40px;
+    border:3px solid var(--accent);
+    box-shadow:0 0 60px rgba(245,158,11,.4);
+    position:relative;max-width:760px;margin:0 auto;
+  }
+  .pricing-ribbon{
+    position:absolute;top:-14px;left:24px;
+    background:linear-gradient(135deg,var(--danger),#991B1B);
+    color:#fff;font-weight:800;font-size:13px;
+    padding:8px 18px;border-radius:8px;letter-spacing:.05em;
+    box-shadow:var(--shadow);
+  }
+  .pricing-card h3{font-size:clamp(20px,2.4vw,28px);color:var(--primary);margin-bottom:24px;text-align:center}
+
+  .price-block{text-align:center;margin-bottom:28px;padding:24px;background:var(--bg-alt);border-radius:16px}
+  .price-old{
+    color:var(--text-muted);font-size:18px;text-decoration:line-through;
+    margin-bottom:6px;font-weight:500;
+  }
+  .price-new{
+    font-size:clamp(36px,5vw,56px);font-weight:900;
+    color:var(--accent);line-height:1;letter-spacing:-.02em;
+    display:inline-flex;align-items:baseline;gap:6px;
+  }
+  .price-new .vnd{font-size:.5em;color:var(--text-muted)}
+  .price-discount{
+    display:inline-block;background:var(--danger);color:#fff;
+    font-weight:800;padding:4px 12px;border-radius:999px;
+    font-size:14px;margin-left:10px;vertical-align:middle;
+  }
+
+  .price-features{display:grid;gap:10px;margin-bottom:28px}
+  @media(min-width:600px){.price-features{grid-template-columns:1fr 1fr}}
+  .price-features li{
+    list-style:none;padding:10px 12px;background:var(--bg-alt);
+    border-radius:10px;font-size:14px;display:flex;gap:10px;align-items:flex-start;
+    line-height:1.5;
+  }
+  .price-features li::before{
+    content:"✓";flex-shrink:0;
+    width:22px;height:22px;border-radius:50%;
+    background:var(--success);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:13px;margin-top:1px;
+  }
+
+  .pricing-countdown{
+    text-align:center;margin:24px 0;
+    padding:18px;background:#FFFBEB;border-radius:12px;
+    border:2px dashed var(--accent);
+  }
+  .pricing-countdown .countdown{justify-content:center}
+  .pricing-countdown .cd-box{background:var(--primary);color:#fff;border-color:var(--primary)}
+  .pricing-countdown .cd-num{color:var(--accent)}
+  .pricing-countdown .cd-unit{color:var(--text-light)}
+
+  .pricing-card .btn-primary{width:100%;font-size:18px}
+
+  /* Other pricing options */
+  .other-pricing{
+    max-width:760px;margin:48px auto 0;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;padding:28px;
+    backdrop-filter:blur(8px);
+  }
+  .other-pricing h4{color:#fff;margin-bottom:18px;font-size:18px}
+  .other-row{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);
+    color:#fff;font-size:15px;
+  }
+  .other-row:last-child{border-bottom:none}
+  .other-row b{color:var(--accent);font-size:17px}
+
+  .group-table{width:100%;margin-top:18px;border-collapse:collapse;color:#fff}
+  .group-table th,.group-table td{padding:12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)}
+  .group-table th{color:var(--accent);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.05em}
+  .group-table td:nth-child(2){color:var(--accent);font-weight:800}
+
+  .gift-banner{
+    margin-top:40px;text-align:center;
+    background:linear-gradient(135deg,var(--accent),var(--danger));
+    color:#fff;padding:20px 28px;border-radius:16px;
+    font-weight:700;font-size:clamp(15px,1.8vw,19px);
+    box-shadow:0 12px 32px rgba(245,158,11,.4);
+  }
+
+  /* === SECTION 9: Form === */
+  .form-section{
+    background:linear-gradient(135deg,#FEF3C7 0%,#FFFFFF 100%);
+  }
+  .form-grid{
+    display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center;
+  }
+  @media(max-width:900px){.form-grid{grid-template-columns:1fr;gap:32px}}
+
+  .form-left h2{margin-bottom:20px;line-height:1.25}
+  .form-promises{display:grid;gap:14px;margin-top:24px}
+  .promise{
+    display:flex;align-items:center;gap:14px;
+    background:#fff;padding:14px 18px;border-radius:12px;
+    box-shadow:var(--shadow-sm);
+  }
+  .promise span:first-child{font-size:24px;flex-shrink:0}
+  .promise span:last-child{font-weight:600;color:var(--text);font-size:14.5px}
+
+  .form-card{
+    background:#fff;border-radius:20px;padding:36px;
+    box-shadow:var(--shadow-lg);
+    border:1px solid var(--border);
+  }
+  @media(max-width:560px){.form-card{padding:24px 20px}}
+  .form-card h3{margin-bottom:20px;color:var(--primary);text-align:center;font-size:22px}
+
+  .field{margin-bottom:16px}
+  .field label{
+    display:block;font-size:13px;font-weight:600;color:var(--text);
+    margin-bottom:6px;
+  }
+  .field input,.field select{
+    width:100%;padding:14px 16px;
+    border:2px solid var(--border);border-radius:10px;
+    font-size:15px;font-family:inherit;color:var(--text);
+    transition:all .25s;background:#fff;
+  }
+  .field input:focus,.field select:focus{
+    outline:none;border-color:var(--accent);
+    box-shadow:0 0 0 4px rgba(245,158,11,.15);
+  }
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:480px){.field-row{grid-template-columns:1fr}}
+
+  .check-row{
+    display:flex;align-items:flex-start;gap:10px;margin:16px 0 24px;
+    font-size:13.5px;color:var(--text-muted);line-height:1.5;
+  }
+  .check-row input[type=checkbox]{margin-top:3px;width:18px;height:18px;accent-color:var(--accent);flex-shrink:0}
+
+  .form-card .btn-primary{width:100%;font-size:17px;padding:18px}
+  .form-error{color:var(--danger);font-size:13px;margin-top:6px;font-weight:600;display:none}
+  .form-error.show{display:block}
+
+  /* Success modal */
+  .modal-backdrop{
+    position:fixed;inset:0;background:rgba(15,23,42,.6);
+    z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;
+    backdrop-filter:blur(6px);
+  }
+  .modal-backdrop.show{display:flex;animation:fadeIn .3s}
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  .modal{
+    background:#fff;border-radius:20px;padding:40px;
+    max-width:500px;width:100%;text-align:center;
+    box-shadow:var(--shadow-lg);
+    animation:slideUp .4s cubic-bezier(.2,.8,.2,1);
+  }
+  @keyframes slideUp{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+  .modal-icon{font-size:72px;margin-bottom:16px;animation:popIn .5s cubic-bezier(.34,1.56,.64,1)}
+  @keyframes popIn{0%{transform:scale(0)}100%{transform:scale(1)}}
+  .modal h3{color:var(--primary);margin-bottom:14px}
+  .modal p{color:var(--text-muted);margin-bottom:24px}
+  .modal button{
+    background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+    color:#fff;font-weight:700;padding:12px 32px;border-radius:10px;
+  }
+
+  /* === SECTION 10: FAQ === */
+  .faq-section{background:#fff}
+  .faq-list{max-width:840px;margin:0 auto;display:grid;gap:14px}
+  .faq{
+    background:var(--bg-alt);border-radius:14px;
+    border:1px solid var(--border);overflow:hidden;
+    transition:box-shadow .3s;
+  }
+  .faq[open]{box-shadow:var(--shadow);border-color:var(--accent)}
+  .faq summary{
+    cursor:pointer;padding:20px 24px;font-weight:700;color:var(--primary);
+    display:flex;align-items:center;gap:14px;list-style:none;user-select:none;
+    font-size:16px;line-height:1.4;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{
+    content:"⌄";margin-left:auto;font-size:22px;font-weight:900;
+    transition:transform .3s;flex-shrink:0;
+  }
+  .faq[open] summary::after{transform:rotate(180deg)}
+  .faq-q-icon{
+    flex-shrink:0;width:32px;height:32px;border-radius:50%;
+    background:var(--accent);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:14px;
+  }
+  .faq-body{padding:0 24px 22px 70px;color:var(--text-muted);line-height:1.65;font-size:15px}
+
+  /* === SECTION 11: Final CTA === */
+  .final-cta{
+    background:linear-gradient(135deg,var(--primary-dark) 0%,#1E1B4B 100%);
+    color:#fff;text-align:center;position:relative;overflow:hidden;
+    padding:100px 0;
+  }
+  .final-cta::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(245,158,11,.1) 1px,transparent 1px);
+    background-size:32px 32px;opacity:.5;
+  }
+  .final-cta canvas{position:absolute;inset:0;z-index:0;pointer-events:none}
+  .final-cta .container{position:relative;z-index:2}
+  .final-cta h2{
+    font-size:clamp(32px,5vw,56px);font-weight:900;color:#fff;
+    margin-bottom:20px;line-height:1.15;
+  }
+  .final-cta h2 span{color:var(--accent)}
+  .final-sub{font-size:clamp(15px,1.7vw,19px);color:var(--text-light);max-width:760px;margin:0 auto 32px;line-height:1.6}
+
+  .urgency-banner{
+    display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+    color:#fff;font-weight:800;padding:14px 28px;border-radius:999px;
+    font-size:clamp(14px,1.6vw,17px);margin-bottom:32px;
+    box-shadow:0 12px 32px rgba(245,158,11,.45);
+    animation:urgencyPulse 2s ease-in-out infinite;
+  }
+  @keyframes urgencyPulse{
+    0%,100%{transform:scale(1);box-shadow:0 12px 32px rgba(245,158,11,.45)}
+    50%{transform:scale(1.04);box-shadow:0 16px 48px rgba(245,158,11,.7)}
+  }
+
+  .final-promises{
+    display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:40px;
+  }
+  .final-promises .promise{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(8px);
+    color:#fff;
+  }
+  .final-promises .promise span:last-child{color:#fff}
+
+  .phone-cta{
+    margin-top:32px;font-size:clamp(18px,2vw,24px);
+    color:#fff;font-weight:700;
+  }
+  .phone-cta a{
+    color:var(--accent);
+    border-bottom:2px dashed var(--accent);
+    padding-bottom:2px;
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .phone-cta .ring{display:inline-block;animation:ring 1.4s ease-in-out infinite}
+  @keyframes ring{
+    0%,50%,100%{transform:rotate(0)}
+    10%,30%{transform:rotate(-15deg)}
+    20%,40%{transform:rotate(15deg)}
+  }
+
+  /* === FOOTER === */
+  footer{background:var(--primary-dark);color:#fff;padding:60px 0 30px}
+  .foot-grid{
+    display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;
+  }
+  @media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+  @media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
+  .foot-col h5{
+    color:#fff;font-size:14px;font-weight:800;
+    text-transform:uppercase;letter-spacing:.05em;margin-bottom:16px;
+  }
+  .foot-col ul{list-style:none}
+  .foot-col li{padding:6px 0}
+  .foot-col a{color:var(--text-light);font-size:14px;transition:color .25s}
+  .foot-col a:hover{color:var(--accent)}
+  .foot-brand p{color:var(--text-light);font-size:14px;margin:12px 0 18px;line-height:1.6}
+  .foot-badges{display:flex;gap:8px;flex-wrap:wrap}
+  .foot-badge{
+    background:rgba(245,158,11,.15);color:var(--accent);
+    padding:6px 12px;border-radius:8px;font-size:12px;font-weight:700;
+  }
+  .foot-newsletter{display:flex;gap:8px;margin-top:12px}
+  .foot-newsletter input{
+    flex:1;padding:10px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.05);color:#fff;font-family:inherit;font-size:13px;
+  }
+  .foot-newsletter button{
+    background:var(--accent);color:#fff;padding:10px 16px;
+    border-radius:8px;font-weight:700;font-size:13px;
+  }
+  .foot-bottom{
+    padding-top:24px;border-top:1px solid rgba(255,255,255,.1);
+    color:var(--text-light);font-size:13px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;
+  }
+
+  /* === FLOATING & STICKY === */
+  .floating-buttons{
+    position:fixed;right:18px;bottom:90px;z-index:998;
+    display:flex;flex-direction:column;gap:12px;
+  }
+  @media(max-width:768px){.floating-buttons{bottom:80px}}
+  .float-btn{
+    width:56px;height:56px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:24px;
+    box-shadow:0 8px 24px rgba(0,0,0,.3);
+    animation:heartbeat 1.6s ease-in-out infinite;
+    transition:transform .25s;
+  }
+  .float-btn:hover{transform:scale(1.1)}
+  .float-btn.zalo{background:linear-gradient(135deg,#0068FF,#0052CC)}
+  .float-btn.phone{background:linear-gradient(135deg,#10B981,#059669);animation-delay:.3s}
+  @keyframes heartbeat{
+    0%,100%{transform:scale(1);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+    50%{transform:scale(1.08);box-shadow:0 8px 32px rgba(0,0,0,.4)}
+  }
+
+  .sticky-bottom{
+    position:fixed;bottom:0;left:0;right:0;z-index:997;
+    background:#fff;border-top:1px solid var(--border);
+    padding:10px 14px;display:none;gap:10px;
+    box-shadow:0 -8px 24px rgba(0,0,0,.1);
+    transform:translateY(100%);transition:transform .4s;
+  }
+  .sticky-bottom.show{transform:translateY(0)}
+  @media(max-width:768px){.sticky-bottom{display:flex}}
+  .sticky-bottom a{
+    flex:1;text-align:center;padding:14px 12px;
+    border-radius:10px;font-weight:700;font-size:14px;
+    display:flex;align-items:center;justify-content:center;gap:6px;
+  }
+  .sticky-bottom .call{background:#10B981;color:#fff}
+  .sticky-bottom .signup{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff}
+
+  /* AOS overrides */
+  [data-aos]{transition-property:transform,opacity}
+</style>
+</head>
+<body>
+
+<!-- ============= HEADER ============= -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">HSA</div>
+      <span>HSA Education</span>
+    </a>
+    <a href="#form" class="header-cta">
+      <span>📝 Đăng ký tư vấn</span>
+    </a>
+  </div>
+</header>
+
+<!-- ============= 1. HERO ============= -->
+<section class="hero">
+  <canvas id="particles"></canvas>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="hero-badge" data-aos="fade-up">🔥 KHAI GIẢNG 10/06/2026 — CHỈ CÒN 100 SUẤT EARLY BIRD</div>
+      <h1 data-aos="fade-up" data-aos-delay="100">
+        2K9 ơi, kỳ thi <span class="highlight">2027 đã thay đổi</span> — Bạn đã sẵn sàng chinh phục Đánh giá Năng lực trên máy tính chưa?
+      </h1>
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">
+        Khóa HSA 2K9 - TH02 đồng hành cùng con từ lớp 11 đến hết kỳ thi: 379+ buổi Zoom trực tiếp, 406 video bài giảng, 12 bài thi thử mô phỏng đề thật. Mục tiêu: 100+ điểm HSA & 8+/9+ tốt nghiệp THPT.
+      </p>
+
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-card"><div class="stat-num counter-target" data-target="10" data-suffix="+">0</div><div class="stat-label">Năm kinh nghiệm</div></div>
+        <div class="stat-card"><div class="stat-num counter-target" data-target="50000" data-suffix="+">0</div><div class="stat-label">Học viên</div></div>
+        <div class="stat-card"><div class="stat-num counter-target" data-target="1000" data-suffix="+">0</div><div class="stat-label">HS đạt 100+ HSA/năm</div></div>
+        <div class="stat-card"><div class="stat-num counter-target" data-target="20" data-suffix="">0</div><div class="stat-label">Thầy cô tác giả</div></div>
+      </div>
+
+      <div class="cta-row" data-aos="fade-up" data-aos-delay="400">
+        <a href="#form" class="btn-primary pulse">📝 ĐĂNG KÝ TƯ VẤN MIỄN PHÍ NGAY</a>
+        <a href="tel:0974187313" class="cta-phone">hoặc gọi hotline 0974 187 313</a>
+      </div>
+
+      <div class="countdown-wrap" data-aos="fade-up" data-aos-delay="500">
+        <div class="countdown-label">⏰ Ưu đãi 50% kết thúc sau:</div>
+        <div class="countdown" id="hero-countdown">
+          <div class="cd-box"><div class="cd-num" data-cd="d">00</div><div class="cd-unit">Ngày</div></div>
+          <div class="cd-box"><div class="cd-num" data-cd="h">00</div><div class="cd-unit">Giờ</div></div>
+          <div class="cd-box"><div class="cd-num" data-cd="m">00</div><div class="cd-unit">Phút</div></div>
+          <div class="cd-box"><div class="cd-num" data-cd="s">00</div><div class="cd-unit">Giây</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" data-aos="fade-left" data-aos-delay="300">
+      <div class="hero-mockup">
+        <div class="mockup-bar"><span></span><span></span><span></span></div>
+        <div class="mockup-content">
+          <h4>🎓 HSA 2K9 - TH02 · Lộ trình học</h4>
+          <div class="lesson-row">
+            <div class="play">▶</div>
+            <div class="info"><b>Tư duy Định lượng</b><span>116 video · 94+ buổi Zoom</span></div>
+          </div>
+          <div class="lesson-row">
+            <div class="play">▶</div>
+            <div class="info"><b>Tư duy Định tính</b><span>45 video · 55 buổi Zoom</span></div>
+          </div>
+          <div class="lesson-row">
+            <div class="play">▶</div>
+            <div class="info"><b>Tiếng Anh</b><span>45 video · 55 buổi Zoom</span></div>
+          </div>
+          <div class="lesson-row">
+            <div class="play">▶</div>
+            <div class="info"><b>Khoa học (Lý-Hóa-Sinh-Sử-Địa)</b><span>75 video · 175+ buổi Zoom</span></div>
+          </div>
+        </div>
+        <div class="hero-badges">🏆 Sao Vàng 2024</div>
+        <div class="vtv-badge">📺 VTV3</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= 2. NEWS ALERT ============= -->
+<section class="news-alert">
+  <div class="container">
+    <h2 class="news-title" data-aos="fade-up">📢 BÁO ĐỘNG: 8 THAY ĐỔI LỚN TRONG TUYỂN SINH 2027 — PHỤ HUYNH 2K9 CẦN BIẾT NGAY!</h2>
+    <p class="news-sub" data-aos="fade-up" data-aos-delay="100">Bộ GD&ĐT vừa công bố quy chế mới và thí điểm thi tốt nghiệp THPT trên máy tính từ năm 2027. Con bạn đã chuẩn bị kịp chưa?</p>
+
+    <div class="news-grid">
+      <div class="news-card" data-aos="fade-right" data-aos-delay="0">
+        <span class="news-icon">💻</span>
+        <h4>Thi tốt nghiệp THPT trên máy tính từ 2027</h4>
+        <p>Thứ trưởng Bộ GD&ĐT Phạm Ngọc Thưởng đã chính thức xác nhận. 2K9 sẽ là lứa đầu tiên thi trên máy tính — cần làm quen ngay với hệ thống mô phỏng.</p>
+      </div>
+      <div class="news-card" data-aos="fade-right" data-aos-delay="100">
+        <span class="news-icon">📉</span>
+        <h4>Thu hẹp xét học bạ — chuyển sang đánh giá chuẩn hóa</h4>
+        <p>Nhiều trường đại học top dừng hoặc giảm xét học bạ, chuyển sang ĐGNL, ĐGTD và xét kết hợp. ĐGNL trở thành con đường vào đại học quan trọng nhất.</p>
+      </div>
+      <div class="news-card" data-aos="fade-right" data-aos-delay="200">
+        <span class="news-icon">🎯</span>
+        <h4>Tổ hợp bắt buộc có Toán hoặc Văn (≥1/3 trọng số)</h4>
+        <p>Quy chế mới yêu cầu Toán hoặc Ngữ văn chiếm ít nhất 1/3 tổng điểm xét tuyển. Học lệch sẽ trả giá đắt.</p>
+      </div>
+      <div class="news-card" data-aos="fade-right" data-aos-delay="300">
+        <span class="news-icon">⚠️</span>
+        <h4>Ngưỡng tối thiểu 15/30 điểm để xét tuyển</h4>
+        <p>Tổng 3 môn theo tổ hợp xét tuyển phải đạt tối thiểu 15 điểm. Cộng điểm khuyến khích 0–1.5 điểm với chứng chỉ ngoại ngữ quốc tế.</p>
+      </div>
+    </div>
+
+    <details class="news-accordion" data-aos="fade-up">
+      <summary>📖 Xem thêm 4 thay đổi quan trọng nữa</summary>
+      <ul>
+        <li>✓ Tối đa 15 nguyện vọng (Chương trình giáo viên chỉ NV 1-5)</li>
+        <li>✓ Xét học bạ tính cả 6 học kỳ (lớp 10, 11, 12)</li>
+        <li>✓ Mở rộng đối tượng xét tuyển: Học sinh trung học nghề, người nước ngoài</li>
+        <li>✓ Đa dạng hóa phương thức xét tuyển kết hợp ĐGNL + Học bạ + Ngoại ngữ</li>
+      </ul>
+    </details>
+
+    <p class="news-bridge" data-aos="fade-up">
+      Nếu con bạn vẫn đang ôn theo cách cũ — bạn đang để con thi đấu với một sân chơi đã đổi luật. <span style="color:var(--accent)">Đây là lúc cần một lộ trình bài bản, được thiết kế riêng cho 2K9.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============= 3. PAIN POINTS ============= -->
+<section class="pain-section">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Bạn có đang lo lắng những <span>điều này?</span></h2>
+    </div>
+
+    <div class="pain-grid">
+      <div class="pain-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="pain-icon">😰</div>
+        <h4>Không biết bắt đầu từ đâu</h4>
+        <p>Quy chế mới, đề thi mới, máy tính mới — con bạn loay hoay giữa hàng đống thông tin và không có lộ trình cụ thể từ lớp 11.</p>
+      </div>
+      <div class="pain-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="pain-icon">📚</div>
+        <h4>Học gốc lớp 10-11 đã hổng</h4>
+        <p>Đi học thêm rời rạc từng môn, không ai gắn kết Toán-Văn-Anh-Khoa học theo cấu trúc bài thi HSA — kết quả là điểm khảo sát luôn dưới 80.</p>
+      </div>
+      <div class="pain-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="pain-icon">⏰</div>
+        <h4>Lịch học chính khóa đã quá tải</h4>
+        <p>Con đi học cả ngày, tối lại học thêm — không còn thời gian luyện đề HSA, không có người chữa bài, không có ai theo sát tiến độ.</p>
+      </div>
+      <div class="pain-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="pain-icon">💸</div>
+        <h4>Sợ mất tiền oan vào trung tâm không uy tín</h4>
+        <p>Nhiều nơi quảng cáo rầm rộ nhưng không có thầy cô chuyên ĐGNL, không có hệ thống thi thử mô phỏng — học xong con vẫn bỡ ngỡ khi vào phòng thi thật.</p>
+      </div>
+      <div class="pain-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="pain-icon">🌫️</div>
+        <h4>Không biết con đang ở đâu so với mục tiêu</h4>
+        <p>Không có bài khảo sát đầu vào, không có báo cáo định kỳ, phụ huynh không biết con đang yếu phần nào và cần bổ sung gì.</p>
+      </div>
+      <div class="pain-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="pain-icon">🎯</div>
+        <h4>Mục tiêu kép quá khó: vừa ĐGNL vừa Tốt nghiệp 8+/9+</h4>
+        <p>Học hai hệ thống song song quá mệt — con cần một lộ trình tích hợp cả ĐGNL lẫn Tốt nghiệp THPT.</p>
+      </div>
+    </div>
+
+    <p class="pain-bridge" data-aos="fade-up">
+      ↓ Nếu bạn gật đầu với bất kỳ điều nào ở trên — bạn đang ở đúng nơi cần đến. <strong style="color:var(--primary)">HSA Education đã đồng hành cùng 50,000+ học viên</strong> giải quyết chính xác những vấn đề này từ năm 2015.
+    </p>
+  </div>
+</section>
+
+<!-- ============= 4. VALUE PROPOSITION ============= -->
+<section class="value-section">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Khóa HSA 2K9 - TH02 — <span>Lộ trình 4 giai đoạn</span> chinh phục Đánh giá Năng lực 2027</h2>
+    </div>
+    <p class="value-sub" data-aos="fade-up" data-aos-delay="100">Khóa học duy nhất tại Việt Nam được thiết kế đồng bộ cả 4 phần thi HSA + tích hợp ôn tốt nghiệp THPT 2027 trên cùng một hệ thống.</p>
+
+    <div class="pillars">
+      <div class="pillar" data-aos="fade-up" data-aos-delay="0">
+        <div class="pillar-icon">🧮</div>
+        <h4>Tư duy Định lượng (Toán)</h4>
+        <p>94+ buổi Zoom + 116 video — Phong tỏa toàn bộ Toán Đại + Toán Hình lớp 12, bổ trợ Casio, luyện đề chuyên sâu.</p>
+      </div>
+      <div class="pillar" data-aos="fade-up" data-aos-delay="100">
+        <div class="pillar-icon">📖</div>
+        <h4>Tư duy Định tính (Văn)</h4>
+        <p>55 buổi Zoom + 45 video — 25 lý thuyết + 30 luyện đề. Làm chủ kỹ năng đọc hiểu, phân tích, lập luận theo cấu trúc HSA.</p>
+      </div>
+      <div class="pillar" data-aos="fade-up" data-aos-delay="200">
+        <div class="pillar-icon">🌐</div>
+        <h4>Tiếng Anh</h4>
+        <p>55 buổi Zoom + 45 video — Ngữ pháp, từ vựng, đọc hiểu theo đúng định dạng HSA.</p>
+      </div>
+      <div class="pillar" data-aos="fade-up" data-aos-delay="300">
+        <div class="pillar-icon">🔬</div>
+        <h4>Khoa học (Lý-Hóa-Sinh-Sử-Địa)</h4>
+        <p>175+ buổi Zoom + 75 video — 5 môn được dạy đầy đủ, học từ 10/8/2026 để không quá tải đầu khóa.</p>
+      </div>
+    </div>
+
+    <div class="summary-banner" data-aos="zoom-in">
+      📊 TỔNG: <b>379+ buổi Zoom trực tiếp</b> · <b>406 video bài giảng</b> · <b>12 bài thi thử mô phỏng</b> · <b>26 bài khảo sát chất lượng</b>
+    </div>
+
+    <div class="benefits-row">
+      <div class="benefit" data-aos="fade-up" data-aos-delay="0">ĐGNL HSA: Mục tiêu 100+ điểm, đỗ NEU/FTU/VNU/UET/TMU</div>
+      <div class="benefit" data-aos="fade-up" data-aos-delay="100">Tốt nghiệp THPT 2027: Mục tiêu 8+/9+ trên thang 10</div>
+      <div class="benefit" data-aos="fade-up" data-aos-delay="200">Sẵn sàng tâm lý: 12 lần thi thử mô phỏng đề thật trên web</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= 5. TIMELINE ============= -->
+<section class="timeline-section">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>📅 Lộ trình học <span>4 giai đoạn</span> — Đồng hành đến phút cuối</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item" data-aos="fade-right">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-date">Trước 10/06/2026</div>
+          <h4>🌱 Giai đoạn 1: Bổ trợ nền tảng</h4>
+          <p>Vào nhóm lớp riêng — Cung cấp video bổ trợ kiến thức gốc lớp 10, 11, 12. Đảm bảo tất cả học sinh khởi đầu khóa với cùng một nền tảng vững.</p>
+        </div>
+      </div>
+      <div class="tl-item" data-aos="fade-left">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-date">10/06/2026 → 30/11/2026</div>
+          <h4>🏗️ Giai đoạn 2: Củng cố kiến thức</h4>
+          <p>Học lý thuyết các chuyên đề trọng tâm theo cấu trúc 4 phần HSA. Các môn Khoa học bắt đầu từ 10/8/2026 để không quá tải.</p>
+        </div>
+      </div>
+      <div class="tl-item" data-aos="fade-right">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-date">01/12/2026 → 15/03/2027</div>
+          <h4>🚀 Giai đoạn 3: Tăng tốc luyện đề</h4>
+          <p>Luyện đề chuyên sâu + thi thử thực chiến phòng thi. Chuẩn bị tối đa cho các đợt thi HSA đầu tiên (tháng 3/2027).</p>
+        </div>
+      </div>
+      <div class="tl-item" data-aos="fade-left">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-date">15/03/2027 → 05/2027</div>
+          <h4>🏁 Giai đoạn 4: Về đích</h4>
+          <p>Bổ trợ nâng cao + luyện đề và thi thử cho các đợt thi sau. Đồng hành cho đến khi kết thúc kỳ thi 2027.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-banner" data-aos="zoom-in">
+      💡 Học vào khung giờ vàng <b>20h00–21h30</b> và <b>21h30–23h00</b> — Không ảnh hưởng lịch học chính khóa.
+    </div>
+  </div>
+</section>
+
+<!-- ============= 6. CREDIBILITY ============= -->
+<section style="padding:0">
+  <!-- 6A -->
+  <div class="cred-block">
+    <div class="container">
+      <h3 data-aos="fade-up">🏆 HSA Education — Đơn vị tiên phong & duy nhất triển khai đồng bộ giải pháp ĐGNL & ĐGTD</h3>
+
+      <div class="badges-row">
+        <div class="badge-item" data-aos="flip-up" data-aos-delay="0">
+          <span class="badge-emoji">🥇</span>
+          <h5>Sao Vàng Thương Hiệu Quốc Gia 2024</h5>
+        </div>
+        <div class="badge-item" data-aos="flip-up" data-aos-delay="100">
+          <span class="badge-emoji">🏅</span>
+          <h5>Top 10 Thương Hiệu Dẫn Đầu Việt Nam 2025</h5>
+        </div>
+        <div class="badge-item" data-aos="flip-up" data-aos-delay="200">
+          <span class="badge-emoji">📺</span>
+          <h5>VTV3 đưa tin — 17h45 ngày 03/02/2025</h5>
+        </div>
+        <div class="badge-item" data-aos="flip-up" data-aos-delay="300">
+          <span class="badge-emoji">🌐</span>
+          <h5>Hệ sinh thái khóa học · Học liệu · Tư vấn miễn phí</h5>
+        </div>
+      </div>
+
+      <div class="counters">
+        <div class="counter" data-aos="fade-up" data-aos-delay="0">
+          <div class="counter-num counter-target" data-target="10" data-suffix="+">0</div>
+          <div class="counter-label">Năm kinh nghiệm</div>
+        </div>
+        <div class="counter" data-aos="fade-up" data-aos-delay="100">
+          <div class="counter-num counter-target" data-target="50000" data-suffix="+">0</div>
+          <div class="counter-label">Học viên</div>
+        </div>
+        <div class="counter" data-aos="fade-up" data-aos-delay="200">
+          <div class="counter-num counter-target" data-target="1000" data-suffix="+">0</div>
+          <div class="counter-label">HS đạt 100+ HSA/năm</div>
+        </div>
+        <div class="counter" data-aos="fade-up" data-aos-delay="300">
+          <div class="counter-num counter-target" data-target="20" data-suffix="">0</div>
+          <div class="counter-label">Thầy cô tác giả</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6B Teachers -->
+  <div class="cred-block alt">
+    <div class="container">
+      <h3 data-aos="fade-up">👨‍🏫 20 Thầy Cô — Tác giả sách "Tổng ôn lý thuyết trọng tâm HSA" (NXB Hồng Đức)</h3>
+
+      <div class="swiper teachers-swiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div>T1</div></div>
+              <h5>Thầy Nguyễn Văn A</h5>
+              <div class="teacher-subj">Tư duy Định lượng</div>
+              <p>Cử nhân ĐHSP Hà Nội — Đồng tác giả sách HSA NXB Hồng Đức</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div>T2</div></div>
+              <h5>Cô Trần Thị B</h5>
+              <div class="teacher-subj">Tư duy Định tính</div>
+              <p>Thạc sĩ Văn học ĐHQG Hà Nội — 8 năm luyện thi ĐGNL</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div>T3</div></div>
+              <h5>Thầy Lê Văn C</h5>
+              <div class="teacher-subj">Tiếng Anh</div>
+              <p>IELTS 8.5 — Cựu giảng viên ĐH Ngoại Ngữ ĐHQG Hà Nội</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div>T4</div></div>
+              <h5>Cô Phạm Thị D</h5>
+              <div class="teacher-subj">Vật Lý</div>
+              <p>Thạc sĩ Vật lý KHTN — Tác giả 5 đầu sách luyện thi</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div>T5</div></div>
+              <h5>Thầy Hoàng Văn E</h5>
+              <div class="teacher-subj">Hóa Học</div>
+              <p>Tiến sĩ Hóa học — 12 năm kinh nghiệm ôn HSA & ĐGNL Sư Phạm</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div>T6</div></div>
+              <h5>Cô Nguyễn Thị F</h5>
+              <div class="teacher-subj">Sinh Học</div>
+              <p>Thạc sĩ Sinh học ĐHSP — Chuyên gia HSA phần Khoa học</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div>T7</div></div>
+              <h5>Thầy Vũ Văn G</h5>
+              <div class="teacher-subj">Lịch Sử</div>
+              <p>Cử nhân Sử học ĐHKHXH&NV — 10 năm dạy ĐGNL khối C00</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="teacher-card">
+              <div class="teacher-avatar"><div>T8</div></div>
+              <h5>Cô Đỗ Thị H</h5>
+              <div class="teacher-subj">Địa Lý</div>
+              <p>Thạc sĩ Địa lý ĐHSP — Đồng tác giả tài liệu HSA Khoa học</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <p style="text-align:center;color:var(--text-muted);font-size:13px;margin-top:24px;font-style:italic">
+        [Cần thay thế: Bổ sung danh sách 20 thầy cô + ảnh + bio + môn dạy thực tế từ HSA Education]
+      </p>
+    </div>
+  </div>
+
+  <!-- 6C Testimonials -->
+  <div class="cred-block">
+    <div class="container">
+      <h3 data-aos="fade-up">💬 Hàng ngàn 2K8, 2K7, 2K6 đã thành công — Lứa 2K9 sẽ là người tiếp theo</h3>
+
+      <div class="testimonials" data-aos="fade-up">
+        <div class="test-card">
+          <div class="test-head">
+            <div class="test-avatar">MA</div>
+            <div class="test-info"><b>Minh Anh</b><span>2K7 · Lớp 12A1</span></div>
+          </div>
+          <span class="test-score">🏆 HSA: 118/150</span>
+          <div class="test-school">✓ Đỗ FTU - Tài chính Quốc tế</div>
+          <p class="test-quote">"Học với HSA Education từ hè lớp 11, em đi từ điểm khảo sát 75 lên 118 chính thức. Thầy cô siêu tâm huyết, mentors hỗ trợ 24/7 thật sự."</p>
+        </div>
+
+        <div class="test-card">
+          <div class="test-head">
+            <div class="test-avatar">QH</div>
+            <div class="test-info"><b>Quang Huy</b><span>2K6 · Lớp 12A2</span></div>
+          </div>
+          <span class="test-score">🏆 HSA: 124/150</span>
+          <div class="test-school">✓ Đỗ NEU - Marketing</div>
+          <p class="test-quote">"12 bài thi thử mô phỏng đúng 100% trải nghiệm phòng thi thật. Vào phòng thi không hề bỡ ngỡ, làm bài đúng tốc độ luyện."</p>
+        </div>
+
+        <div class="test-card">
+          <div class="test-head">
+            <div class="test-avatar">TL</div>
+            <div class="test-info"><b>Thuỳ Linh</b><span>2K7 · Lớp 12 chuyên Anh</span></div>
+          </div>
+          <span class="test-score">🏆 HSA: 110/150</span>
+          <div class="test-school">✓ Đỗ VNU - Quan hệ Quốc tế</div>
+          <p class="test-quote">"Em sợ phần Khoa học vì học khối D, nhưng HSA Education dạy nền tảng lại rất chắc. Tốt nghiệp THPT em cũng đạt 8.6 nhờ video chữa đề kèm theo."</p>
+        </div>
+
+        <div class="test-card">
+          <div class="test-head">
+            <div class="test-avatar">DT</div>
+            <div class="test-info"><b>Đức Thành</b><span>2K8 · Lớp 12 chuyên Toán</span></div>
+          </div>
+          <span class="test-score">🏆 HSA: 132/150</span>
+          <div class="test-school">✓ Đỗ UET - Khoa học Máy tính</div>
+          <p class="test-quote">"Thi thử trên web HSA quá xịn. Hệ thống chấm điểm tức thì, có phân tích từng phần yếu. Em biết chính xác cần luyện thêm gì mỗi tuần."</p>
+        </div>
+
+        <div class="test-card">
+          <div class="test-head">
+            <div class="test-avatar">PA</div>
+            <div class="test-info"><b>Phương Anh</b><span>2K7 · Lớp 12A5</span></div>
+          </div>
+          <span class="test-score">🏆 HSA: 105/150</span>
+          <div class="test-school">✓ Đỗ TMU - Quản trị Kinh doanh</div>
+          <p class="test-quote">"Mẹ em sợ học online không hiệu quả nhưng Zoom HSA tương tác thật, giơ tay là thầy cô gọi liền. Học xong còn xem lại video không giới hạn."</p>
+        </div>
+
+        <div class="test-card">
+          <div class="test-head">
+            <div class="test-avatar">VK</div>
+            <div class="test-info"><b>Việt Khôi</b><span>2K6 · Lớp 12A3</span></div>
+          </div>
+          <span class="test-score">🏆 HSA: 121/150</span>
+          <div class="test-school">✓ Đỗ HUST - Cơ điện tử</div>
+          <p class="test-quote">"Thầy cô đều là tác giả sách NXB Hồng Đức nên dạy cực kỳ bài bản. Bộ tài liệu tặng kèm 4 cuốn luyện đề thực sự đáng giá hơn học phí."</p>
+        </div>
+
+        <div class="test-card">
+          <div class="test-head">
+            <div class="test-avatar">NH</div>
+            <div class="test-info"><b>Ngọc Hà</b><span>2K8 · Lớp 11A1</span></div>
+          </div>
+          <span class="test-score">🏆 Tốt nghiệp 9.2/10</span>
+          <div class="test-school">✓ Đang ôn HSA tại HSA Education</div>
+          <p class="test-quote">"Em mới học giai đoạn 1 nhưng đã thấy lộ trình rõ ràng. Mentors chữa bài nhanh, không lo bị bỏ rơi như học ở trung tâm cũ."</p>
+        </div>
+
+        <div class="test-card">
+          <div class="test-head">
+            <div class="test-avatar">BQ</div>
+            <div class="test-info"><b>Bảo Quân</b><span>2K7 · Lớp 12A4</span></div>
+          </div>
+          <span class="test-score">🏆 HSA: 115/150</span>
+          <div class="test-school">✓ Đỗ NUCE - Xây dựng</div>
+          <p class="test-quote">"Học khóa trọn gói tiết kiệm hơn nhiều so với học từng môn lẻ. Thầy cô chuyên sâu HSA, không phải kiểu copy giáo án THPT thông thường."</p>
+        </div>
+
+        <div class="test-card">
+          <div class="test-head">
+            <div class="test-avatar">HM</div>
+            <div class="test-info"><b>Hà My</b><span>2K7 · Lớp 12 chuyên Sinh</span></div>
+          </div>
+          <span class="test-score">🏆 HSA: 128/150</span>
+          <div class="test-school">✓ Đỗ HMU - Y khoa</div>
+          <p class="test-quote">"Mục tiêu Y nên cần cả HSA cao và Tốt nghiệp 9+. HSA Education tích hợp được cả hai, em không phải đăng ký 2 trung tâm khác nhau."</p>
+        </div>
+      </div>
+
+      <p style="text-align:center;color:var(--text-muted);font-size:13px;font-style:italic;margin-bottom:30px">
+        [Cần thay thế: 6-9 testimonial thật từ học viên cũ — gồm ảnh, tên, niên khóa, điểm, trường đỗ, quote]
+      </p>
+
+      <div data-aos="fade-up">
+        <h4 style="text-align:center;margin-bottom:20px;color:var(--primary)">🎓 Trường top học viên đã đỗ</h4>
+        <div class="schools-row">
+          <div class="school-badge">NEU</div>
+          <div class="school-badge">FTU</div>
+          <div class="school-badge">VNU</div>
+          <div class="school-badge">UET</div>
+          <div class="school-badge">TMU</div>
+          <div class="school-badge">HUST</div>
+          <div class="school-badge">NUCE</div>
+          <div class="school-badge">HMU</div>
+          <div class="school-badge">HCMUT</div>
+        </div>
+      </div>
+
+      <div class="book-banner" data-aos="zoom-in">
+        <div>
+          <h4>📚 Bộ tài liệu độc quyền</h4>
+          <p>"Tổng ôn lý thuyết trọng tâm + Luyện đề thực chiến HSA" — Tặng kèm 4 cuốn cho HS đăng ký sớm. Trị giá 600.000đ.</p>
+        </div>
+        <div class="book-visual">📚</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= 7. FORMAT ============= -->
+<section style="background:var(--bg-alt)">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>💻 Học mọi lúc, mọi nơi — <span>Tương tác thật, kết quả thật</span></h2>
+    </div>
+
+    <div class="format-grid">
+      <div class="features">
+        <div class="feature" data-aos="fade-right" data-aos-delay="0">
+          <div class="feature-icon">🎥</div>
+          <div><h5>Zoom bản quyền tương tác hai chiều</h5><p>Giơ tay hỏi trực tiếp, thầy cô gọi tên, không phải chỉ ngồi xem.</p></div>
+        </div>
+        <div class="feature" data-aos="fade-right" data-aos-delay="100">
+          <div class="feature-icon">⏰</div>
+          <div><h5>Khung giờ vàng 20h–23h</h5><p>Sau giờ học chính khóa — không trùng lịch học thêm thông thường.</p></div>
+        </div>
+        <div class="feature" data-aos="fade-right" data-aos-delay="200">
+          <div class="feature-icon">🔁</div>
+          <div><h5>Video xem lại trên web HSA</h5><p>Xem được không giới hạn — học lúc nào, ở đâu cũng được.</p></div>
+        </div>
+        <div class="feature" data-aos="fade-right" data-aos-delay="300">
+          <div class="feature-icon">👥</div>
+          <div><h5>Mentors 120+ điểm đồng hành</h5><p>Đội mentors xuất sắc chữa bài, giải đáp 24/7 trên nhóm riêng.</p></div>
+        </div>
+      </div>
+
+      <div class="format-mockup" data-aos="fade-left">
+        <div class="format-mockup-title"><span class="dot"></span>HSA Live · Đang trực tiếp</div>
+        <div class="video-frame">🎓</div>
+        <div class="participants">
+          <div class="pp">M</div>
+          <div class="pp">L</div>
+          <div class="pp">A</div>
+          <div class="pp">H</div>
+          <div class="pp">+92</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= 8. PRICING ============= -->
+<section class="pricing-section">
+  <div class="container">
+    <h2 class="pricing-title" data-aos="fade-up">⚡ HỌC PHÍ & ƯU ĐÃI ĐẶC BIỆT</h2>
+    <p class="pricing-title-sub" data-aos="fade-up">Chỉ áp dụng cho 100 học sinh đầu tiên</p>
+
+    <div class="pricing-card" data-aos="zoom-in">
+      <div class="pricing-ribbon">⭐ EARLY BIRD</div>
+      <h3>HSA 2K9 - TH02 · TRỌN GÓI 4 PHẦN THI</h3>
+
+      <div class="price-block">
+        <div class="price-old">7.800.000 VNĐ</div>
+        <div class="price-new">3.900.000<span class="vnd">VNĐ</span><span class="price-discount">-50%</span></div>
+      </div>
+
+      <ul class="price-features">
+        <li>379+ buổi Zoom trực tiếp với 20 thầy cô tác giả sách NXB Hồng Đức</li>
+        <li>406 video bài giảng xem không giới hạn trên web HSA</li>
+        <li>4 bài khảo sát đầu vào + 22 bài khảo sát hàng tháng</li>
+        <li>12 bài thi thử mô phỏng đề thật trên hệ thống web</li>
+        <li>Đồng hành đến hết kỳ thi HSA 2027 (Giai đoạn 4 — Về đích)</li>
+        <li>Đội mentors 120+ điểm hỗ trợ 24/7</li>
+        <li>Tặng 4 cuốn sách "Luyện đề thực chiến HSA" (trị giá 600.000đ)</li>
+        <li>Tặng 160 video chữa đề Tốt nghiệp THPT 2027 (8 môn)</li>
+        <li>Cơ hội nhận Laptop 15 triệu cho Thủ khoa 2027</li>
+        <li>Học bổng tổng trị giá 100 triệu đồng</li>
+      </ul>
+
+      <div class="pricing-countdown">
+        <div class="countdown-label" style="color:var(--danger);margin-bottom:12px">⏰ Ưu đãi 50% kết thúc sau:</div>
+        <div class="countdown" id="pricing-countdown">
+          <div class="cd-box"><div class="cd-num" data-cd="d">00</div><div class="cd-unit">Ngày</div></div>
+          <div class="cd-box"><div class="cd-num" data-cd="h">00</div><div class="cd-unit">Giờ</div></div>
+          <div class="cd-box"><div class="cd-num" data-cd="m">00</div><div class="cd-unit">Phút</div></div>
+          <div class="cd-box"><div class="cd-num" data-cd="s">00</div><div class="cd-unit">Giây</div></div>
+        </div>
+      </div>
+
+      <a href="#form" class="btn-primary pulse">🔥 GIỮ SUẤT EARLY BIRD NGAY — CHỈ 3.900.000Đ</a>
+    </div>
+
+    <div class="other-pricing" data-aos="fade-up">
+      <h4>💼 Gói cá nhân — Đăng ký sớm trước 10/06/2026</h4>
+      <div class="other-row">
+        <span>Học phí gốc</span>
+        <span style="text-decoration:line-through;color:var(--text-light)">7.800.000đ</span>
+      </div>
+      <div class="other-row">
+        <span>Học phí ưu đãi (-40%)</span>
+        <b>4.650.000đ</b>
+      </div>
+
+      <h4 style="margin-top:24px">🤝 Ưu đãi đăng ký nhóm</h4>
+      <table class="group-table">
+        <thead><tr><th>Nhóm</th><th>Học phí/HS</th><th>Tiết kiệm</th></tr></thead>
+        <tbody>
+          <tr><td>🤝 2-3 bạn</td><td>3.800.000đ</td><td>4.0tr/người</td></tr>
+          <tr><td>👥 4-9 bạn</td><td>3.700.000đ</td><td>4.1tr/người</td></tr>
+          <tr><td>🎉 10+ bạn</td><td>3.600.000đ</td><td>4.2tr/người</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="gift-banner" data-aos="zoom-in">
+      🎁 Đặc biệt: Tất cả học sinh đăng ký đều được tặng bộ <b>04 cuốn 'Luyện đề thực chiến HSA'</b> — Số lượng có hạn!
+    </div>
+  </div>
+</section>
+
+<!-- ============= 9. FORM ============= -->
+<section class="form-section" id="form">
+  <div class="container">
+    <div class="form-grid">
+      <div class="form-left" data-aos="fade-right">
+        <h2>📝 Để lại thông tin — HSA Education tư vấn lộ trình riêng cho con bạn</h2>
+        <p style="color:var(--text-muted);font-size:16px">Chuyên viên tư vấn của HSA Education sẽ liên hệ với bạn trong vòng 24h để lên lộ trình cá nhân hóa cho con — hoàn toàn miễn phí.</p>
+
+        <div class="form-promises">
+          <div class="promise"><span>🎯</span><span>Tư vấn lộ trình miễn phí 100% — không ép mua</span></div>
+          <div class="promise"><span>⚡</span><span>Phản hồi trong vòng 24 giờ từ chuyên viên</span></div>
+          <div class="promise"><span>🔒</span><span>Bảo mật thông tin tuyệt đối</span></div>
+        </div>
+      </div>
+
+      <div class="form-card" data-aos="fade-left">
+        <h3>Đăng ký tư vấn miễn phí</h3>
+        <form id="leadForm">
+          <div class="field">
+            <label>Họ và tên học sinh *</label>
+            <input type="text" name="hoTen" required placeholder="Nguyễn Văn A" />
+            <div class="form-error" data-error="hoTen">Vui lòng nhập họ tên</div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label>Năm sinh *</label>
+              <input type="number" name="namSinh" required value="2009" min="2008" max="2010" />
+              <div class="form-error" data-error="namSinh">Năm sinh từ 2008-2010</div>
+            </div>
+            <div class="field">
+              <label>Số điện thoại *</label>
+              <input type="tel" name="sdt" required placeholder="0987654321" />
+              <div class="form-error" data-error="sdt">SĐT không hợp lệ (10 số, bắt đầu 0)</div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Email *</label>
+            <input type="email" name="email" required placeholder="email@example.com" />
+            <div class="form-error" data-error="email">Email không hợp lệ</div>
+          </div>
+
+          <div class="field">
+            <label>Nguyện vọng trường đại học của con</label>
+            <input type="text" name="nguyenVong" placeholder="VD: NEU, FTU, VNU..." />
+          </div>
+
+          <div class="field">
+            <label>Kỳ thi quan tâm *</label>
+            <select name="kyThi" required>
+              <option value="">-- Chọn kỳ thi --</option>
+              <option>ĐGNL ĐHQG Hà Nội (HSA)</option>
+              <option>ĐGNL Bộ Công An (BCA)</option>
+              <option>ĐGNL Sư Phạm (SPT)</option>
+              <option>ĐGTD Bách Khoa (TSA)</option>
+              <option>ĐGNL Bộ Quốc Phòng (QDA)</option>
+            </select>
+            <div class="form-error" data-error="kyThi">Vui lòng chọn kỳ thi</div>
+          </div>
+
+          <label class="check-row">
+            <input type="checkbox" name="dongY" required />
+            <span>Tôi đồng ý nhận tư vấn từ HSA Education và đã đọc chính sách bảo mật.</span>
+          </label>
+
+          <button type="submit" class="btn-primary pulse">🔥 ĐĂNG KÝ TƯ VẤN NGAY</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= 10. FAQ ============= -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>❓ Câu hỏi <span>phụ huynh và 2K9</span> hay hỏi nhất</h2>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq" data-aos="fade-up">
+        <summary><span class="faq-q-icon">?</span>Con em mới lớp 11, học khóa này có sớm quá không?</summary>
+        <div class="faq-body">Không hề. Khai giảng 10/06/2026 (hè trước lớp 12) là thời điểm vàng. Trước đó còn có Giai đoạn 1 'Bổ trợ nền tảng' miễn phí video lớp 10-11 để con vào khóa không bị hổng.</div>
+      </details>
+
+      <details class="faq" data-aos="fade-up">
+        <summary><span class="faq-q-icon">?</span>Khóa có hỗ trợ ôn Tốt nghiệp THPT 2027 không?</summary>
+        <div class="faq-body">Có. Đây là khóa duy nhất tích hợp 'Kết quả kép': vừa luyện HSA vừa hỗ trợ Tốt nghiệp THPT mục tiêu 8+/9+. Tặng kèm 160 video chữa đề Tốt nghiệp 8 môn.</div>
+      </details>
+
+      <details class="faq" data-aos="fade-up">
+        <summary><span class="faq-q-icon">?</span>Học online qua Zoom có hiệu quả không?</summary>
+        <div class="faq-body">Zoom bản quyền tương tác hai chiều — con có thể giơ tay hỏi trực tiếp, mentors hỗ trợ 24/7 trên nhóm riêng. Tất cả buổi học đều có video xem lại trên web HSA.</div>
+      </details>
+
+      <details class="faq" data-aos="fade-up">
+        <summary><span class="faq-q-icon">?</span>Lịch học có ảnh hưởng học chính khóa không?</summary>
+        <div class="faq-body">Không. Khung giờ vàng 20h00–21h30 và 21h30–23h00, sau giờ học chính khóa, không trùng lịch học thêm thông thường.</div>
+      </details>
+
+      <details class="faq" data-aos="fade-up">
+        <summary><span class="faq-q-icon">?</span>Nếu con không theo kịp thì sao?</summary>
+        <div class="faq-body">Có 4 bài khảo sát đầu vào + 22 bài khảo sát hàng tháng để theo dõi tiến độ. Mentors hỗ trợ riêng cho từng học sinh. Phụ huynh được báo cáo định kỳ.</div>
+      </details>
+
+      <details class="faq" data-aos="fade-up">
+        <summary><span class="faq-q-icon">?</span>Đăng ký nhóm có khác gì đăng ký cá nhân?</summary>
+        <div class="faq-body">Chương trình học giống nhau 100%, chỉ khác mức học phí ưu đãi: nhóm 2-3 bạn (3.8tr/HS), 4-9 bạn (3.7tr/HS), 10+ bạn (3.6tr/HS).</div>
+      </details>
+
+      <details class="faq" data-aos="fade-up">
+        <summary><span class="faq-q-icon">?</span>Hình thức thanh toán và xuất hóa đơn?</summary>
+        <div class="faq-body">Chuyển khoản ngân hàng. Có hóa đơn VAT theo yêu cầu. Hotline 0974 187 313 để được hướng dẫn cụ thể.</div>
+      </details>
+
+      <details class="faq" data-aos="fade-up">
+        <summary><span class="faq-q-icon">?</span>Em đăng ký rồi thì khi nào bắt đầu được học?</summary>
+        <div class="faq-body">Ngay sau khi xác nhận đóng phí, con vào ngay nhóm lớp riêng và truy cập video Giai đoạn 1 (Bổ trợ nền tảng). Khóa chính khai giảng 10/06/2026.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============= 11. FINAL CTA ============= -->
+<section class="final-cta">
+  <canvas id="particles2"></canvas>
+  <div class="container">
+    <h2 data-aos="fade-up">2027 không chờ ai cả — <span>Đặc biệt là 2K9</span></h2>
+    <p class="final-sub" data-aos="fade-up" data-aos-delay="100">Quy chế đã thay đổi. Đề thi đã chuyển sang máy tính. Học bạ đang bị thu hẹp. Con bạn cần một lộ trình bài bản — và HSA Education đã sẵn sàng đồng hành đến phút cuối.</p>
+
+    <div class="urgency-banner" data-aos="zoom-in">⏳ Còn lại <b id="slots-left">73</b>/100 suất Early Bird — Hết suất, học phí trở về 7.800.000đ</div>
+
+    <div class="final-promises">
+      <div class="promise" data-aos="fade-up" data-aos-delay="0"><span>✅</span><span>Tư vấn lộ trình miễn phí 100%</span></div>
+      <div class="promise" data-aos="fade-up" data-aos-delay="100"><span>✅</span><span>Tặng 4 sách + 160 video Tốt nghiệp</span></div>
+      <div class="promise" data-aos="fade-up" data-aos-delay="200"><span>✅</span><span>Đồng hành đến hết kỳ thi 2027</span></div>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="300">
+      <a href="#form" class="btn-primary pulse mega">🚀 GIỮ SUẤT EARLY BIRD CHO CON NGAY</a>
+    </div>
+
+    <div class="phone-cta" data-aos="fade-up" data-aos-delay="400">
+      <span class="ring">📞</span> Hoặc gọi ngay hotline: <a href="tel:0974187313">0974 187 313</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FOOTER ============= -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col foot-brand">
+        <div class="logo" style="color:#fff">
+          <div class="logo-mark">HSA</div>
+          <span>HSA Education</span>
+        </div>
+        <p>Tiên phong & Dẫn đầu Luyện thi Đánh giá Năng lực từ 2015. Hệ sinh thái khép kín: Khóa học · Học liệu · Tư vấn miễn phí.</p>
+        <div class="foot-badges">
+          <span class="foot-badge">🥇 Sao Vàng 2024</span>
+          <span class="foot-badge">🏅 Top 10 - 2025</span>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h5>Liên hệ</h5>
+        <ul>
+          <li><a href="tel:0974187313">📞 0974 187 313</a></li>
+          <li><a href="mailto:contact@hsaedu.vn">📧 contact@hsaedu.vn</a></li>
+          <li>📍 Số 11B, Ngách 3/29, Ngõ 3, Phạm Tuấn Tài, Nghĩa Đô, Hà Nội</li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h5>Khóa học</h5>
+        <ul>
+          <li><a href="#">Khóa HSA</a></li>
+          <li><a href="#">Khóa TSA</a></li>
+          <li><a href="#">Khóa BCA / SPT / QDA</a></li>
+          <li><a href="#">Học liệu</a></li>
+          <li><a href="#form">Tư vấn miễn phí</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h5>Mạng xã hội</h5>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">Zalo OA</a></li>
+        </ul>
+        <div class="foot-newsletter">
+          <input type="email" placeholder="Email của bạn" />
+          <button>Đăng ký</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 HSA Education. All rights reserved.</span>
+      <span id="ambassador-credit">Đại sứ giới thiệu: <b>—</b></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============= FLOATING ============= -->
+<div class="floating-buttons">
+  <a href="https://zalo.me/0974187313" class="float-btn zalo" title="Zalo">💬</a>
+  <a href="tel:0974187313" class="float-btn phone" title="Gọi điện">📞</a>
+</div>
+
+<div class="sticky-bottom" id="sticky-bottom">
+  <a href="tel:0974187313" class="call">📞 Gọi 0974 187 313</a>
+  <a href="#form" class="signup">📝 Đăng ký ngay</a>
+</div>
+
+<!-- Success Modal -->
+<div class="modal-backdrop" id="modal">
+  <div class="modal">
+    <div class="modal-icon">🎉</div>
+    <h3>Cảm ơn bạn!</h3>
+    <p>HSA Education sẽ liên hệ trong vòng 24h. Trong thời gian chờ, bạn có thể gọi hotline <b>0974 187 313</b> để được hỗ trợ ngay.</p>
+    <button onclick="closeModal()">Đóng</button>
+  </div>
+</div>
+
+<!-- ============= SCRIPTS ============= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+// ===== Google Sheet Web App URL — REPLACE BEFORE GOING LIVE =====
+const SHEET_API_URL = 'https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec';
+
+// ===== AOS init =====
+AOS.init({
+  duration: 700,
+  once: true,
+  offset: 80,
+  easing: 'ease-out-cubic'
+});
+
+// ===== Sticky header =====
+const header = document.getElementById('header');
+const stickyBottom = document.getElementById('sticky-bottom');
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  header.classList.toggle('scrolled', y > 20);
+
+  // sticky bottom appears after 30% scroll
+  const docH = document.documentElement.scrollHeight - window.innerHeight;
+  if (y / docH > 0.15) stickyBottom.classList.add('show');
+  else stickyBottom.classList.remove('show');
+
+  lastScroll = y;
+});
+
+// ===== Counter animation =====
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const startVal = 0;
+
+  function tick(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+    const val = Math.floor(startVal + (target - startVal) * eased);
+    el.textContent = val.toLocaleString('vi-VN') + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+    else el.textContent = target.toLocaleString('vi-VN') + suffix;
+  }
+  requestAnimationFrame(tick);
+}
+
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !e.target.dataset.counted) {
+      e.target.dataset.counted = '1';
+      animateCounter(e.target);
+    }
+  });
+}, { threshold: 0.4 });
+
+document.querySelectorAll('.counter-target').forEach(el => counterObs.observe(el));
+
+// ===== Countdown — to next Sunday 23:59 =====
+function getEndDate() {
+  // Persist end date for the week
+  const stored = sessionStorage.getItem('hsa_countdown_end');
+  if (stored) {
+    const d = new Date(parseInt(stored));
+    if (d > new Date()) return d;
+  }
+  const now = new Date();
+  const end = new Date(now);
+  const dayOfWeek = now.getDay(); // 0 = Sun
+  const daysUntilSunday = dayOfWeek === 0 ? 7 : 7 - dayOfWeek;
+  end.setDate(now.getDate() + daysUntilSunday);
+  end.setHours(23, 59, 59, 999);
+  sessionStorage.setItem('hsa_countdown_end', end.getTime().toString());
+  return end;
+}
+
+const endDate = getEndDate();
+
+function updateCountdowns() {
+  const now = new Date();
+  let diff = endDate - now;
+  if (diff < 0) diff = 0;
+
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+
+  const pad = n => String(n).padStart(2, '0');
+
+  document.querySelectorAll('.countdown').forEach(c => {
+    const setVal = (key, val) => {
+      const el = c.querySelector(`[data-cd="${key}"]`);
+      if (el && el.textContent !== val) {
+        el.textContent = val;
+      }
+    };
+    setVal('d', pad(d));
+    setVal('h', pad(h));
+    setVal('m', pad(m));
+    setVal('s', pad(s));
+  });
+}
+updateCountdowns();
+setInterval(updateCountdowns, 1000);
+
+// ===== Particles (hero) =====
+function initParticles(canvasId, color) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w, h, particles = [];
+
+  function resize() {
+    w = canvas.width = canvas.offsetWidth;
+    h = canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const N = Math.min(60, Math.floor(w / 20));
+  for (let i = 0; i < N; i++) {
+    particles.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3 - 0.1,
+      r: Math.random() * 2 + 0.5,
+      a: Math.random() * 0.5 + 0.2
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > w) p.vx *= -1;
+      if (p.y < 0 || p.y > h) p.vy *= -1;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${color},${p.a})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+initParticles('particles', '255,255,255');
+initParticles('particles2', '245,158,11');
+
+// ===== Swiper =====
+new Swiper('.teachers-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  autoplay: { delay: 4000, disableOnInteraction: false },
+  pagination: { el: '.swiper-pagination', clickable: true },
+  loop: true,
+  breakpoints: {
+    640: { slidesPerView: 2 },
+    900: { slidesPerView: 3 },
+    1100: { slidesPerView: 4 }
+  }
+});
+
+// ===== Form =====
+const form = document.getElementById('leadForm');
+const modal = document.getElementById('modal');
+
+function showError(name, show) {
+  const err = form.querySelector(`[data-error="${name}"]`);
+  if (err) err.classList.toggle('show', show);
+}
+
+function validate(data) {
+  let valid = true;
+  if (!data.hoTen.trim()) { showError('hoTen', true); valid = false; } else showError('hoTen', false);
+  const ns = parseInt(data.namSinh);
+  if (!ns || ns < 2008 || ns > 2010) { showError('namSinh', true); valid = false; } else showError('namSinh', false);
+  if (!/^0\d{9}$/.test(data.sdt)) { showError('sdt', true); valid = false; } else showError('sdt', false);
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) { showError('email', true); valid = false; } else showError('email', false);
+  if (!data.kyThi) { showError('kyThi', true); valid = false; } else showError('kyThi', false);
+  return valid;
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const fd = new FormData(form);
+  const data = {
+    hoTen: fd.get('hoTen'),
+    namSinh: fd.get('namSinh'),
+    sdt: fd.get('sdt'),
+    email: fd.get('email'),
+    nguyenVong: fd.get('nguyenVong') || '',
+    kyThi: fd.get('kyThi'),
+    ambassadorId: getUTMParam('utm_content') || '',
+    utmSource: getUTMParam('utm_source') || '',
+    utmCampaign: getUTMParam('utm_campaign') || '',
+    submittedAt: new Date().toISOString()
+  };
+
+  if (!validate(data)) return;
+
+  const submitBtn = form.querySelector('button[type=submit]');
+  const originalText = submitBtn.innerHTML;
+  submitBtn.innerHTML = '⏳ Đang gửi...';
+  submitBtn.disabled = true;
+
+  try {
+    if (SHEET_API_URL.includes('REPLACE_WITH')) {
+      console.log('[DEMO MODE] Form data:', data);
+    } else {
+      await fetch(SHEET_API_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(data)
+      });
+    }
+    showModal();
+    form.reset();
+    document.querySelector('[name=namSinh]').value = '2009';
+  } catch (err) {
+    alert('Có lỗi xảy ra. Vui lòng gọi 0974 187 313 để được hỗ trợ.');
+  } finally {
+    submitBtn.innerHTML = originalText;
+    submitBtn.disabled = false;
+  }
+});
+
+function showModal() {
+  modal.classList.add('show');
+  // Confetti effect
+  burstConfetti();
+}
+function closeModal() {
+  modal.classList.remove('show');
+}
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) closeModal();
+});
+
+// Tiny confetti
+function burstConfetti() {
+  const colors = ['#F59E0B','#1E3A8A','#10B981','#DC2626','#FBBF24'];
+  for (let i = 0; i < 60; i++) {
+    const c = document.createElement('div');
+    c.style.cssText = `
+      position:fixed;top:50%;left:50%;width:10px;height:10px;
+      background:${colors[i%colors.length]};
+      border-radius:${Math.random()>.5?'50%':'2px'};
+      pointer-events:none;z-index:10000;
+      transform:translate(-50%,-50%);
+    `;
+    document.body.appendChild(c);
+    const angle = Math.random() * Math.PI * 2;
+    const vel = Math.random() * 300 + 100;
+    const vx = Math.cos(angle) * vel;
+    const vy = Math.sin(angle) * vel - 200;
+    c.animate([
+      { transform: 'translate(-50%,-50%) rotate(0deg)', opacity: 1 },
+      { transform: `translate(calc(-50% + ${vx}px), calc(-50% + ${vy + 600}px)) rotate(${720*Math.random()}deg)`, opacity: 0 }
+    ], { duration: 1800 + Math.random()*800, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    setTimeout(() => c.remove(), 2600);
+  }
+}
+
+// ===== UTM tracking =====
+function getUTMParam(key) {
+  const params = new URLSearchParams(window.location.search);
+  return params.get(key);
+}
+
+const ambassador = getUTMParam('utm_content');
+if (ambassador) {
+  const credit = document.getElementById('ambassador-credit');
+  credit.innerHTML = `Đại sứ giới thiệu: <b style="color:var(--accent)">${ambassador}</b>`;
+}
+</script>
+
+</body>
+</html>
